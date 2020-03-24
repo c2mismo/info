@@ -1,0 +1,38 @@
+/* text-decoration: none; 
+claro 7dbbb9 oscuro 002b36 ?? 2aafb0
+
+
+*/
+
+.aRed {
+  text-decoration: none; 
+  outline: none;
+  /* text-decoration: none; */
+  padding: 2px 1px 0;
+}
+/* El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. */
+.aRed:link, .aRed:visited {
+  color: #550000;
+}
+/* Un enlace cuando ya se ha visitado (está grabado en el historial del navegador).
+.aRed:visited {
+  color: #2aafb0;
+} */
+/* Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab
+del teclado o se le da el foco mediante programación usando HTMLElement.focus()). */
+.aRed:focus {
+  border-bottom: 1px solid;
+  background: #7dbbb9;
+  color: #550000;
+}
+/* Un enlace cuando se le pasa el cursor por encima. */
+.aRed:hover {
+  border-bottom: 1px solid;     
+  background: #7dbbb9;
+  color: #550000;
+}
+/* Un enlace cuando se activa (por ejemplo, se hace clic encima). */
+.aRed:active {
+  background: #7dbbb9;
+  color: #550000;
+}  

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<HTML lang="es">
+
+<HEAD>
+	<meta charset="UTF-8">
+
+	<TITLE>c2mismo - index</TITLE>
+	<!-- Estilo CSS personal -->
+	<link href="indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/anclasRed.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<!-- <link href="indexhtml/css/bibliographic.css" rel="stylesheet" type="text/css">  -->
+	<link href="indexhtml/css/media600.css" rel="stylesheet" type="text/css">
+	
+	<!-- Estilo CSS code-highlightjs con estilo Solarized y tres fondos  -->
+	<!-- <link rel="stylesheet" href="styles/solarized-light.css">  -->
+	<!-- <link rel="stylesheet" href="styles/solarized-dark.css">
+	<link rel="stylesheet" href="indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
+	<script src="indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>  -->
+	
+
+</HEAD>
+
+<BODY>
+	<header>
+		<div class=flexHeader>
+			<h1>c2mismo - Manuales diversos</h1>
+			<!-- <img src="indexhtml/img/menu1.svg" alt="Menu"> -->
+		</div>
+	</header>
+	<!-- BUTTONS -->
+
+	<nav>
+		<button class="navButton" onclick="navMenu()">Menu</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
+	</nav>
+	<!-- MENU DIRECTORIES -->
+
+	<div id="menuArduino" class="dirArduino hidden">
+		<p>Enlaces a manuales de Arduino</p>
+	</div>
+
+	<div id="menuElectronica" class="dirElectronica hidden">
+		<p>Enlaces a manuales de Electronica</p>
+	</div>
+
+	<div id="menuInformatica" class="dirInformatica hidden">
+		<p>Enlaces a manuales de Informatica</p>
+		<a class="aRed" href="Informatica/HTML/HTML.html">
+		Manual HTML</a><br>
+	</div>
+
+	<!-- DOCUMENT TITTLE -->
+
+	<section>
+		<div>
+			<h1>Manuales y documentos de c2mismo</h1>
+			<p>Estos manuales no pretenden ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+		</div>
+	</section>
+
+	<!-- DOCUMENT
+
+	 <article>
+	</article>
+
+	<!-- DETAILS
+
+	<details>
+		<summary>Fuentes y enlaces de interés</summary>
+			<div>
+				<p> Paletas de colores:</p>
+				<a href="colorhunt.co" target="_blank">colorhunt.co</a>
+				<p> Fuentes:</p>
+				<a href="https://developer.mozilla.org/es/docs/Web/Reference" target="_blank">
+				https://developer.mozilla.org/es/docs/Web/Reference</a>
+				<br>
+				<a href="http://www.w3schools.com/html/html_elements.asp" target="_blank">
+				http://www.w3schools.com/html/html_elements.asp</a>
+				<p>Lorem ipsum dolor, sit amet consectetur adipsicing elit. N</p>
+			</div>
+	</details>
+
+	<!-- FOOTER -->
+
+	<footer>
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+			c2mismo, 2020</p>
+	</footer>
+
+	<!-- JS -->
+
+	<script>
+		function navMenu(){
+			var ancla = document.getElementsByClassName('navBar');
+			for(var i = 0; i < ancla.length; i++){
+				ancla[i].classList.toggle('hideLikeMovil');
+			}
+		}
+	</script>
+	<script>
+		function navMenuArduino(){
+			var anclaArduino = document.getElementsByClassName('dirArduino');
+			for(var i = 0; i < anclaArduino.length; i++){
+				anclaArduino[i].classList.toggle('hidden');
+			}
+		}
+	</script>
+	<script>
+		function navMenuElectronica(){
+			var anclaElectronica = document.getElementsByClassName('dirElectronica');
+			for(var i = 0; i < anclaElectronica.length; i++){
+				anclaElectronica[i].classList.toggle('hidden');
+			}
+		}
+	</script>
+	<script>
+		function navMenuInformatica(){
+			var anclaInformatica = document.getElementsByClassName('dirInformatica');
+			for(var i = 0; i < anclaInformatica.length; i++){
+				anclaInformatica[i].classList.toggle('hidden');
+			}
+		}
+	</script>
+	<!-- document.getElementsByClassName('directories'); -->
+	<!-- document.getElementById('menuArduino'); -->
+
+</BODY>
+
+</HTML>
+
+
+
+

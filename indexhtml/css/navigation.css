@@ -1,0 +1,65 @@
+nav {
+	background: #27496d;
+	border: 3px solid #0c7b93;
+	margin: 0 20px 0 20px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-around; /* center space-between flex-end */
+}
+.navBar{
+	display: inline-block;
+	background: #0c7b93;
+	color: #550000;
+	padding: 10px 10px;
+	margin: 10px;
+	text-decoration: none;
+  font-weight: 450;
+}
+.navBar:hover{ /* raton sobre */
+	background: #7dbbb9;
+}
+.navBar:active{ /* click raton */
+	background: #002b36;
+	color: #7dbbb9;
+}
+.navButton{
+	background: #7dbbb9;
+	color: #550000;
+	padding: 10px 10px;
+	margin: 10px;
+	border: 2px solid #fff;
+	display: none;
+}
+.navButton:hover{ /* raton sobre */
+	background: #0c7b93;
+}
+.navButton:active{ /* click raton */
+	background: #002b36;
+	color: #7dbbb9;
+}
+
+
+.actualDirectory {
+  color: #550000; /* Color en hexadecimal */
+  background: #0c7b93;
+	margin: 0 20px; /*margen (arriba y abajo) (Izq y derecha) */
+	padding: 0; /* Margen dentro */
+	display: flex;
+}
+
+.formatActDir {
+	margin: 0 20px;
+	padding: 0;
+}
+
+
+.dirArduino, .dirElectronica, .dirInformatica {
+  color: #002b36;
+  background: #0c7b93;
+	margin: 2px 20px;
+	padding: 20px 30px;
+}
+
+.hidden {
+		display: none;
+} 

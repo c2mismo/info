@@ -1,0 +1,123 @@
+/* fuentes
+ *
+ * paletas colorhunt.co  https://colorhunt.co/palette/171392
+ * https://developer.mozilla.org/es/docs/Web/Reference
+ * https://www.w3schools.com/ monospace
+*/
+
+body {
+	background: #002b36;
+	line-height: 1.6;
+	letter-spacing: 0.05rem;
+}
+
+.flexHeader {
+	display: flex;
+	flex-wrap: wrap;
+	background: #27496d;
+	align-items: baseline;
+	margin: 0px 20px;
+	margin-top: 50px;
+	padding: 0.1px 30px;
+}
+.flexHeader > h1 {
+	font-size: 40px;
+	color: #7dbbb9;
+	flex: 80%;
+}
+.flexHeader > a {
+  width: 40px;
+	height: 40px;
+	padding: 9px 7px;
+	margin-top: 30px;
+	border-style: solid;
+	border-color: #002b36;
+}
+.flexHeader > a:hover {
+	background: #002b36;
+}
+
+section > div {
+	background: #27496d;
+	text-align: center;
+	background: #27496d;
+	color: #00a8cc;
+	padding: 30px 30px;
+	margin: 0px 20px;
+	margin-top: 50px;
+	border-style: solid;
+	border-color: #0c7b93;
+}
+
+section > div > h1 {
+	font-size:  40px;
+}
+
+article{
+	background: #27496d; /*  27496d  #7dbbb9   #c5d7d9 */
+	color: #7dbbb9;      /* 7dbbb9 2a5d68 */
+	padding: 30px 30px;
+	margin: 0 20px 50px 20px;
+	border-bottom: 3px solid #0c7b93;
+	border-right: 3px solid #0c7b93;
+	border-left: 3px solid #0c7b93;
+}
+
+article > h2 {
+	color: #00a8cc;
+	font-size:  40px;
+	border-style: solid;
+	border-color: #0c7b93;
+	padding: 20px 50px;
+}
+article > h3 {
+	color: #00a8cc;
+	font-size:  25px;
+	border-bottom: solid;
+	border-color: #0c7b93;
+	padding: 20px 25px;
+}
+article > h4 {
+	color: #00a8cc;
+	font-size:  25px;
+}
+
+.nota {
+	color: #437A16;
+}
+
+.adver {
+	color: #550000;
+	background: #fff3d4;
+	border-left: 5px solid #f6b73c;
+	margin: 20px 20px;
+	padding: 10px 30px;
+}
+.adver > div {
+	padding: 0 0 0 50px;
+}
+
+img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	max-width: 100%;
+  height: auto;
+}
+
+
+details {
+	border-style: solid;
+	border-color: #27496d;
+  background: #002b36;
+	color: #00a8cc;
+  padding: 0 10px;
+  margin: 0 20px;
+}
+
+footer {
+	position: relative;
+	color: #7dbbb9;
+	padding: 10px 10px;
+	margin: 10px 20px;
+}

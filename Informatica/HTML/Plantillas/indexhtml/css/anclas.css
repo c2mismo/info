@@ -1,0 +1,31 @@
+a {
+  outline: none;
+  /* text-decoration: none; */
+  padding: 2px 1px 0;
+}
+/* El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. */
+a:link, a:visited {
+  color: #2aafb0;
+}
+/* Un enlace cuando ya se ha visitado (está grabado en el historial del navegador).
+a:visited {
+  color: #2aafb0;
+} */
+/* Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab
+del teclado o se le da el foco mediante programación usando HTMLElement.focus()). */
+a:focus {
+  border-bottom: 1px solid;
+  background: #7dbbb9;
+  color: #002b36;
+}
+/* Un enlace cuando se le pasa el cursor por encima. */
+a:hover {
+  border-bottom: 1px solid;     
+  background: #7dbbb9;
+  color: #002b36;
+}
+/* Un enlace cuando se activa (por ejemplo, se hace clic encima). */
+a:active {
+  background: #7dbbb9;
+  color: #002b36;
+} 

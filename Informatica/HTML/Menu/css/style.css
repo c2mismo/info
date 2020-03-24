@@ -1,0 +1,166 @@
+/* vamos por el video 15 */
+/* https://www.youtube.com/watch?v=oqegxG13FzA&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=15 */
+/* paletas colorhunt.co  https://colorhunt.co/palette/171392*/
+h1 {
+	color: violet;
+	font-size: 50px;
+	background: #27496d;
+	/* margin:100px; */
+	margin: 100px 200px; /*margen (arriba y abajo) (Izq y derecha) */
+	padding: 50px; /* Margen dentro */
+}
+
+h2 {
+	color: blue;
+	font-size:  40px;
+}
+/* id solo se puede usar una vez en toda la pagina */
+#unico {
+	color: pink;
+	font-size:  60px;
+}
+/* class se puede usar tanto como quieras en la pagina */
+.articulo{
+	margin: 0 auto;
+	width: 90%;
+}
+.brown {
+	color: brown;
+}
+
+.verde {
+	color: rgb(60, 177 71);
+}
+
+p {
+  color: #550000; /* Color en hexadecimal */
+  background: #0c7b93;
+	margin-left:30px;
+	margin-right:100px;
+}
+nav {
+	background: #27496d;
+	margin: 50px 20px;
+	padding: 20px 20px;
+	display: flex;
+	justify-content: space-around; /* center space-between flex-end */
+}
+.navBar{
+	display: inline-block;
+	background: black;
+	color: #ff08cf;
+	padding: 10px 30px;
+	margin: 10px;
+	text-decoration: none;
+}
+.navBar:hover{ /* raton sobre */
+	background: rosybrown;
+}
+.navBar:active{ /* click raton */
+	background: brown;
+}
+.navButton{
+	background: salmon;
+	color: #fff;
+	padding: 10px 0;
+	border: 2px solid #fff;
+	display: none;
+}
+.columna{
+	background: #27496d;
+	color: #00a8cc;
+	margin: 50px 20px;
+	padding: 20px;
+	width: 25%;
+}
+.padre {
+	display: flex; /* flexible no ocupara todo el ancho */
+	/* Tambien para convertir un elemento de
+	 * bloque en un elemento de línea
+	 * display: inline-block;
+	 * Tambien para convertir un elemento de
+	 * línea en uno de bloque
+	 * display: block;
+	 *  */
+}
+/* para dispositivo con menos de 600px */
+/* DROPDOWN menu en el nav */
+
+ul {
+  list-style-type: none;
+	background: #27496d;
+	margin: 50px 20px;
+	padding: 20px 20px;
+  overflow: hidden;
+  background-color: #333;
+	
+	display: flex;
+	justify-content: space-around;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* fin DROPDOWN menu en el nav */
+
+@media (max-width: 600px) {
+	nav{
+		background: black;
+		flex-direction: column;
+	}
+	ul {
+		flex-direction: column;
+	}
+	li a, .dropbtn {
+    text-align: left;
+  }
+	.navBar:hover{ /* raton sobre */
+		margin: 10px 0px;
+	}
+	.navButton{
+		display: inline-block;
+	}
+	.desaparece{
+		display: none;
+	}
+}
