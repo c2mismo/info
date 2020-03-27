@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<HTML lang="es">
+
+<HEAD>
+	<meta charset="UTF-8">
+
+	<TITLE>c2mismo HTML</TITLE>
+	<!-- Estilo CSS personal -->
+	<link href="indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/bibliographic.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/media600.css" rel="stylesheet" type="text/css">
+	
+	<!-- Estilo CSS code-highlightjs con estilo Solarized y tres fondos -->
+	<!-- <link rel="stylesheet" href="styles/solarized-light.css">  -->
+	<!-- <link rel="stylesheet" href="styles/solarized-dark.css">  -->
+	<link rel="stylesheet" href="indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
+	<script src="indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+
+</HEAD>
+
+<BODY>
+	<header>
+		<div class=flexHeader>
+			<h1>c2mismo - Manuales diversos</h1>
+			<a href="../../index.html" target="_blank">
+				<img src="indexhtml/img/menu1.svg" alt="Menu">
+			</a>
+		</div>
+	</header>
+	<!-- BUTTONS
+
+	<nav>
+		<button class="navButton" onclick="navMenu()">Menu</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
+		<button class="navBar hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
+	</nav>
+	<!-- MENU DIRECTORIES
+
+	<div id="menuArduino" class="dirArduino hidden">
+		<p>Arduino</p>
+		<a class="aRed" href=# target="_blank">En inglés Bién esquematizado</a><br>
+		<a class="aRed" href=# target="_blank">Otro enlace</a>
+	</div>
+
+	<div id="menuElectronica" class="dirElectronica hidden">
+		<p>Enlaces a DIRECTORIOS de Electronica</p>
+		<a class="aRed" href="http://www.w3schools.com/html/html_elements.asp" target="_blank">
+		En inglés Bién esquematizado</a><br>
+		<a class="aRed" href="https://www.floraqueen.es/ramos-de-flores" target="_blank">
+		Otro enlace</a>
+	</div>
+
+	<div id="menuInformatica" class="dirInformatica hidden">
+		<p>Enlaces a DIRECTORIOS de Informatica</p>
+		<a class="aRed" href="http://www.w3schools.com/html/html_elements.asp" target="_blank">
+		En inglés Bién esquematizado</a><br>
+		<a class="aRed" href="https://www.floraqueen.es/ramos-de-flores" target="_blank">
+		Otro enlace</a>
+	</div>
+
+	<!-- DOCUMENT TITTLE -->
+
+	<section>
+		<div>
+			<h1>Manual GIT</h1>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+			<p><strong>INDICE</strong></p>
+			<div class="center">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#ssh">Configuracion SSH</a></li>
+						</ol>
+					</li>
+					<li><a href="#otros">Otros</a>
+						<ol>
+							<li><a href="#remote">Remote</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</section>
+
+	<!-- DOCUMENT -->
+
+	<article>
+		<H2 id=configuracion>Configuración</H2>
+		<p>Podemos ver la lista de configuraciones:</p>
+		<pre><code class="bash">git config --list</code></pre>
+
+		<h3 id="usuales">Configuraciones mas usuales</h3>
+
+		<p>Guardamos credenciales:</p>
+		<pre><code class="bash">git config --global user.name "NOMBRE"
+git config --global user.email "<NOMBRE@EMAIL.com>"
+git config --global core.editor nano
+git config --global credential.helper cache	# Guarda tus credenciales del servidor varios minutos</code></pre>
+
+		<p>Rerere, la funcionalidad del "git rerere" es una característica oculta. El nombre se refiere a "reuse recorded resolution" y, como el nombre lo insinúa, te permite pedirle a Git que recuerde cómo resolviste un conflicto de hunk. Así la próxima vez que vea el mismo conflicto, Git puede resolverlo automáticamente por ti.:</p>
+		<pre><code class="bash">git config --global rerere.enabled true</code></pre>
+		<p class="nota">Por ahora no lo uso, tengo varias dudas. <a href=https://www.git-scm.com/book/es/v2/Herramientas-de-Git-Rerere" target="_blank">7.9 Herramientas de Git - Rerere</a></p>
+		
+		<p>Alias, yo no los uso, prefiero usar el aliases.rc del sistema, pero dejo aquí unos ejemplos:</p>
+		<pre><code class="bash">git config --global alias.co checkout	# crea un alias de checkout "co"
+git config --global alias.unstage 'reset HEAD --'	# alias de un comando completo
+git config --global alias.gk '!gitk'	# para un alias de un comando externo anteponer !
+git config --global alias.graf 'log --oneline --decorate --graph --all'</code></pre>
+		
+		<p id="ssh">Clave SSH, para comunicarse con el servidor de gitHub de forma automática y mas segura, </br>
+		primero configuramos el ssh del sistema y creamos una clave privada y pública,
+		la clave pública la ingresamos en gitHub y la prvada la guardamos encriptada,
+		segundo, añadimos nuestra clave privada al sistema, para no teernos que logear
+		cada vez que nos conectemos:</p>
+		<pre><code class="bash">ssh-keygen -o
+cat ~/.ssh/id_rsa.pub
+
+ssh-agent
+ssh-add ~/.ssh/id_rsa</code></pre>
+		<h2>Iniciar un nuevo area de trabajo</h2>
+
+		<h3>Creamos en local y lo subimos a remoto</h3>
+		<p>Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
+		Por último subimos el repositorio.</p>
+		<pre><code class="bash">mkdir nuevo-proyecto
+cd nuevo-proyecto
+init
+remote</code></pre>
+		<p class="nota">Mas usos de <a href="#remote">remote</a>.</p>
+
+
+		<h3>Creamos en remoto y lo descargamos en local</h3>
+
+
+		<h3>Eliminamos un repositorio</h3>
+
+		
+		<h3 id=otros>Otros comandos de utilidad</h3>
+		<h2 id=remote>Remote</h2>
+		<pre><code class="bash">mkdir nuevo-proyecto
+cd nuevo-proyecto
+init
+remote</code></pre>
+
+	</article>
+
+	<!-- DETAILS -->
+
+	<details>
+		<summary>Fuentes, créditos y enlaces de interés</summary>
+			<div>
+				<p> Fuentes:</p>
+				<a href="https://www.git-scm.com" target="_blank">
+				GIT</a></br>
+				<a href="https://www.git-scm.com/book/es/v2" target="_blank">
+				GIT Libro completo en castellano</a></br>
+				<p>   Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
+			</div>
+	</details>
+
+	<!-- FOOTER -->
+
+	<footer>
+		<p>
+			( <a href="http://creativecommons.org/licenses/by/2.5/es/"><abbr title="Creative Commons">cc</abbr></a> ) 
+			c2mismo, 2020</p>
+	</footer>
+
+</BODY>
+
+</HTML>
+
+
+
+

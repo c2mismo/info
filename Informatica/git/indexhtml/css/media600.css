@@ -1,0 +1,20 @@
+/* para dispositivo con menos de 600px */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 20px;
+	}
+	.center {
+  margin: auto;
+  width: 100%;
+}
+	nav{
+		background: #27496d;
+		flex-direction: column;
+	}
+	.navButton{
+		display: inline-block;
+	}
+	.hideLikeMovil{
+		display: none;
+	}
+}
