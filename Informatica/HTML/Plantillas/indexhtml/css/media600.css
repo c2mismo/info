@@ -3,10 +3,6 @@
 	h1 {
 		font-size: 20px;
 	}
-	.center {
-  margin: auto;
-  width: 100%;
-}
 	nav{
 		background: #27496d;
 		flex-direction: column;
