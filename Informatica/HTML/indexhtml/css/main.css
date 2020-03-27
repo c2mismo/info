@@ -11,6 +11,15 @@ body {
 	letter-spacing: 0.05rem;
 }
 
+.center {
+  margin: auto;
+  width: 50%;
+}
+
+ol, li {
+	text-align: left;
+}
+
 .flexHeader {
 	display: flex;
 	flex-wrap: wrap;
@@ -82,8 +91,14 @@ article > h4 {
 	font-size:  25px;
 }
 
+article > p {
+	padding: 30px 0 0 0;
+}
+
 .nota {
 	color: #437A16;
+	margin: 0;
+	padding: 0px 30px;
 }
 
 .adver {
