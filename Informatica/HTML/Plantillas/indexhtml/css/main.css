@@ -44,7 +44,6 @@ body {
 }
 
 section > div {
-	background: #27496d;
 	text-align: center;
 	background: #27496d;
 	color: #00a8cc;
@@ -56,9 +55,10 @@ section > div {
 }
 
 section > div > h1 {
+	color: #7dbbb9;
 	font-size:  40px;
 	border-style: solid;
-	border-color: #0c7b93;
+	border-color: #7dbbb9;
 }
 
 .center {
@@ -92,7 +92,7 @@ article > div > h3 {
 }
 article > div > h4 {
 	color: #00a8cc;
-	font-size:  25px;
+	font-size:  20px;
 }
 
 article > div > p {
@@ -135,6 +135,7 @@ details {
 }
 
 footer {
+	text-align: center;
 	position: relative;
 	color: #7dbbb9;
 	padding: 10px 10px;
