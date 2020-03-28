@@ -92,65 +92,68 @@
 	<!-- DOCUMENT -->
 
 	<article>
-		<H2 id=configuracion>Configuración</H2>
-		<p>&nbsp;Podemos ver la lista de configuraciones:</p>
-		<pre><code class="bash">git config --list</code></pre>
+		<div class="marco">
+			<H2 id=configuracion>Configuración</H2>
+			<p>&nbsp;Podemos ver la lista de configuraciones:</p>
+			<pre><code class="bash">git config --list</code></pre>
 
-		<h3 id="usuales">Configuraciones mas usuales</h3>
+			<h3 id="usuales">Configuraciones mas usuales</h3>
 
-		<p>&nbsp;Guardamos credenciales:</p>
-		<pre><code class="bash">git config --global user.name "NOMBRE"
+			<p>&nbsp;Guardamos credenciales:</p>
+			<pre><code class="bash">git config --global user.name "NOMBRE"
 git config --global user.email "<NOMBRE@EMAIL.com>"
 git config --global core.editor nano
 git config --global credential.helper cache	# Guarda tus credenciales del servidor varios minutos</code></pre>
 
-		<p>&nbsp;Rerere, la funcionalidad del "git rerere" es una característica oculta. El nombre se refiere a "reuse recorded resolution" y, como el nombre lo insinúa, te permite pedirle a Git que recuerde cómo resolviste un conflicto de hunk. Así la próxima vez que vea el mismo conflicto, Git puede resolverlo automáticamente por ti.:</p>
-		<pre><code class="bash">git config --global rerere.enabled true</code></pre>
-		<p class="nota">Por ahora no lo uso, tengo varias dudas. <a href="https://www.git-scm.com/book/es/v2/Herramientas-de-Git-Rerere" target="_blank">7.9 Herramientas de Git - Rerere</a></p>
-		
-		<p>&nbsp;Alias, yo no los uso, prefiero usar el aliases.rc del sistema, pero dejo aquí unos ejemplos:</p>
-		<pre><code class="bash">git config --global alias.co checkout	# crea un alias de checkout "co"
+			<p>&nbsp;Rerere, la funcionalidad del "git rerere" es una característica oculta. El nombre se refiere a "reuse recorded resolution" y, como el nombre lo insinúa, te permite pedirle a Git que recuerde cómo resolviste un conflicto de hunk. Así la próxima vez que vea el mismo conflicto, Git puede resolverlo automáticamente por ti.:</p>
+			<pre><code class="bash">git config --global rerere.enabled true</code></pre>
+			<p class="nota">Por ahora no lo uso, tengo varias dudas. <a href="https://www.git-scm.com/book/es/v2/Herramientas-de-Git-Rerere" target="_blank">7.9 Herramientas de Git - Rerere</a></p>
+
+			<p>&nbsp;Alias, yo no los uso, prefiero usar el aliases.rc del sistema, pero dejo aquí unos ejemplos:</p>
+			<pre><code class="bash">git config --global alias.co checkout	# crea un alias de checkout "co"
 git config --global alias.unstage 'reset HEAD --'	# alias de un comando completo
 git config --global alias.gk '!gitk'	# para un alias de un comando externo anteponer !
 git config --global alias.graf 'log --oneline --decorate --graph --all'</code></pre>
-		
-		<p id="ssh">&nbsp;Clave SSH, para comunicarse con el servidor de gitHub de forma automática y mas segura, </br>
-		primero configuramos el ssh del sistema y creamos una clave privada y pública,
-		la clave pública la ingresamos en gitHub y la prvada la guardamos encriptada,
-		segundo, añadimos nuestra clave privada al sistema, para no teernos que logear
-		cada vez que nos conectemos:</p>
-		<pre><code class="bash">ssh-keygen -o
+
+			<p id="ssh">&nbsp;Clave SSH, para comunicarse con el servidor de gitHub de forma automática y mas segura, </br>
+			primero configuramos el ssh del sistema y creamos una clave privada y pública,
+			la clave pública la ingresamos en gitHub y la prvada la guardamos encriptada,
+			segundo, añadimos nuestra clave privada al sistema, para no teernos que logear
+			cada vez que nos conectemos:</p>
+			<pre><code class="bash">ssh-keygen -o
 cat ~/.ssh/id_rsa.pub
 
 ssh-agent
 ssh-add ~/.ssh/id_rsa</code></pre>
-		<h2>Iniciar un nuevo area de trabajo</h2>
+		</div>
+		<div class="marco">
+			<h2>Areas de trabajo</h2>
 
-		<h3>Creamos en local y lo subimos a remoto</h3>
-		<p>&nbsp;Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
-		Por último subimos el repositorio.</p>
-		<pre><code class="bash">mkdir nuevo-proyecto
+			<h3>Creamos en local y lo subimos a remoto</h3>
+			<p>&nbsp;Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
+			Por último subimos el repositorio.</p>
+			<pre><code class="bash">mkdir nuevo-proyecto
 cd nuevo-proyecto
 init
 remote</code></pre>
-		<p class="nota">Mas usos de <a href="#remote">remote</a>.</p>
+			<p class="nota">Mas usos de <a href="#remote">remote</a>.</p>
 
 
-		<h3>Creamos en remoto y lo descargamos en local</h3>
+			<h3>Creamos en remoto y lo descargamos en local</h3>
 
 
-		<h3>Eliminamos un repositorio</h3>
-
-		
-		<h2 id=otros>Otros comandos de utilidad</h2>
-		<h3 id=remote>Remote</h3>
-		<pre><code class="bash">remote -v       # Muestra los repo remotos que tengamos
+			<h3>Eliminamos un repositorio</h3>
+		</div>
+		<div class="marco">
+			<h2 id=otros>Otros comandos de utilidad</h2>
+			<h3 id=remote>Remote</h3>
+			<pre><code class="bash">remote -v       # Muestra los repo remotos que tengamos
 remote show aliasRemoto	# Muestra mas informacion
 remote add aliasRemoto direccionRepositorio    # añadimos y descargamos en vez de clone
 						# aliasRemoto es un alias para uno.
 remote rename aliasRemoto aliasRemotoNuevo
 remote remove aliasRemoto	# elimina el remoto completo: ramas, archivos y ajustes</code></pre>
-
+		</div>
 	</article>
 
 	<!-- DETAILS -->

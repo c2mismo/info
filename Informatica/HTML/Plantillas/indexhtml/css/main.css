@@ -3,21 +3,15 @@
  * paletas colorhunt.co  https://colorhunt.co/palette/171392
  * https://developer.mozilla.org/es/docs/Web/Reference
  * https://www.w3schools.com/ monospace
+ *
+ * Colors:
+ * body #002b36 section #27496d H1 #7dbbb9 H2 #00a8cc nota #437A16 borfer #0c7b93 #c5d7d9 #2a5d68
 */
 
 body {
 	background: #002b36;
 	line-height: 1.6;
 	letter-spacing: 0.05rem;
-}
-
-.center {
-	position: relative;
-  display: inline-block;
-}
-
-ol, li {
-	text-align: left;
 }
 
 .flexHeader {
@@ -29,11 +23,13 @@ ol, li {
 	margin-top: 50px;
 	padding: 0.1px 30px;
 }
+
 .flexHeader > h1 {
-	font-size: 40px;
-	color: #7dbbb9;
+	font-size: 30px;
+	color: #002b36;
 	flex: 80%;
 }
+
 .flexHeader > a {
   width: 40px;
 	height: 40px;
@@ -42,6 +38,7 @@ ol, li {
 	border-style: solid;
 	border-color: #002b36;
 }
+
 .flexHeader > a:hover {
 	background: #002b36;
 }
@@ -60,38 +57,45 @@ section > div {
 
 section > div > h1 {
 	font-size:  40px;
-}
-
-article{
-	background: #27496d; /*  27496d  #7dbbb9   #c5d7d9 */
-	color: #7dbbb9;      /* 7dbbb9 2a5d68 */
-	padding: 30px 30px;
-	margin: 0 20px 50px 20px;
-	border-bottom: 3px solid #0c7b93;
-	border-right: 3px solid #0c7b93;
-	border-left: 3px solid #0c7b93;
-}
-
-article > h2 {
-	color: #00a8cc;
-	font-size:  40px;
 	border-style: solid;
 	border-color: #0c7b93;
-	padding: 20px 50px;
 }
-article > h3 {
+
+.center {
+	position: relative;
+  display: inline-block;
+}
+
+ol, li {
+	text-align: left;
+}
+
+article > .marco {
+	color: #7dbbb9;
+	background: #27496d;
+	border-style: solid;
+	border-color: #0c7b93;
+	padding: 20px 20px;
+	margin: 20px 20px 20px 20px;
+}
+article > div > h2 {
+	color: #00a8cc;
+	font-size:  40px;
+	padding: 0 0px;
+}
+article > div > h3 {
 	color: #00a8cc;
 	font-size:  25px;
 	border-bottom: solid;
 	border-color: #0c7b93;
 	padding: 20px 25px;
 }
-article > h4 {
+article > div > h4 {
 	color: #00a8cc;
 	font-size:  25px;
 }
 
-article > p {
+article > div > p {
 	padding: 30px 0 0 0;
 }
 
