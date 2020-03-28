@@ -6,6 +6,7 @@
  *
  * Colors:
  * body #002b36 section #27496d H1 #7dbbb9 H2 #00a8cc nota #437A16 borfer #0c7b93 #c5d7d9 #2a5d68
+ * adver #550000	background #fff3d4	border #f6b73c
 */
 
 body {
@@ -22,6 +23,7 @@ body {
 	margin: 0px 20px;
 	margin-top: 50px;
 	padding: 0.1px 30px;
+  border-radius: 20px;
 }
 
 .flexHeader > h1 {
@@ -37,6 +39,7 @@ body {
 	margin-top: 30px;
 	border-style: solid;
 	border-color: #002b36;
+  border-radius: 10px;
 }
 
 .flexHeader > a:hover {
@@ -59,6 +62,7 @@ section > div > h1 {
 	font-size:  40px;
 	border-style: solid;
 	border-color: #7dbbb9;
+  border-radius: 20px;
 }
 
 .center {
@@ -106,10 +110,11 @@ article > div > p {
 }
 
 .adver {
-	color: #550000;
-	background: #fff3d4;
-	border-left: 5px solid #f6b73c;
-	margin: 20px 20px;
+	color: #4b2367;
+	background: #00a8cc;
+	border-left: 7px solid #741529; /* 721b65 53149d 882367  */
+  border-radius: 20px;
+	margin: 50px 50px 20px 50px;
 	padding: 10px 30px;
 }
 .adver > div {
