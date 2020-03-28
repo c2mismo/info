@@ -2,23 +2,35 @@
   body {
     line-height: 1.4;
     letter-spacing: 0rem;
-	font-size:  25px;
+		font-size:  25px;
   }
   .flexHeader {
-	 margin: 0;
-	 margin-top: 50px;
+		margin: 0;
+		margin-top: 50px;
   }
   .flexHeader > h1 {
-	 font-size: 45px;
+		font-size: 45px;
   }
-  article > div > h2 {
-	font-size:  55px;
+	section > div {
+		margin: 0;
+		margin-top: 50px;
+	}
+	section > div > h1 {
+		font-size:  55px;
+	}
+	article > .marco {
+		margin: 20px 0 20px 0;
+	}
+	article > div > h2 {
+		font-size:  55px;
+	}
+	article > div > h3 {
+		font-size:  40px;
+	}
+	article > div > h4 {
+		font-size:  35px;
+	}
+	details {
+		margin: 0;
+	}
 }
-article > div > h3 {
-	font-size:  40px;
-}
-article > div > h4 {
-	font-size:  35px;
-}
-
-} 
