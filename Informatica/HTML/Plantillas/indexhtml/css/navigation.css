@@ -1,7 +1,7 @@
 nav {
 	background: #27496d;
 	border: 3px solid #0c7b93;
-	margin: 0 20px 0 20px;
+	margin: 50px 20px 0px 20px;
 	padding: 10px 20px;
 	display: flex;
 	justify-content: space-around; /* center space-between flex-end */
