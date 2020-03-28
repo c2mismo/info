@@ -77,6 +77,21 @@
 						<ol>
 							<li><a href="#usuales">Configuraciones usuales</a></li>
 							<li><a href="#ssh">Configuracion SSH</a></li>
+							<li><a href="#sistema">Configuracion del sistema</a></li>
+						</ol>
+					</li>
+					<li><a href="#actual">Actual area de trabajo</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+							<li><a href="#add">Añadir cambios</a></li>
+							<li><a href="#mv">Mover archivo</a></li>
+							<li><a href="#rm">Eliminar archivo</a></li>
+							<li><a href="#resetHead">Reset HEAD</a></li>
+						</ol>
+					</li>
+					<li><a href="#historial">Historial de trabajo</a>
+						<ol>
+							<li><a href="#commit">Commits</a></li>
 						</ol>
 					</li>
 					<li><a href="#otros">Otros</a>
@@ -88,7 +103,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- DOCUMENT -->
 
 	<article>
@@ -125,28 +139,195 @@ cat ~/.ssh/id_rsa.pub
 
 ssh-agent
 ssh-add ~/.ssh/id_rsa</code></pre>
+
+			<h3 id="sistema">Configuraciones del sistema</h3>
+
+			<p>&nbsp;Descargamos los repositorios:</p>
+			<pre><code class="bash">cd ~/proyectos
+git clone git@github.com:c2mismo/documentos.git
+git clone git@github.com:c2mismo/info.git
+git clone git@github.com:c2mismo/dotfile.git
+mkdir ~/proyectos/Arduino
+cd ~/proyectos/Arduino
+git clone git@github.com:c2mismo/230box.git
+git clone git@github.com:c2mismo/ArduMan.git
+git clone git@github.com:c2mismo/arduLib.git</code></pre>
+			<p class="nota">dotfile.git al ser necesario para la instalación del sistema, es probable que ya se encuentre descargado.</p></br>
+			<H4>Configuramos algun script para facilitar alguna acción.</H4>
+			<p>Por ejemplo:</br></br> gitstatus.sh para mostrar el status de todos los repositorios,</p>
+			<pre><code class="bash">nano ~/.gitstatus.sh</code></pre>
+			<pre><code class="bash">#! /bin/bash
+
+echo
+echo "                     *** documentos ***"
+echo
+cd $HOME/proyectos/documentos && git status
+echo
+echo "                      Fin documentos"
+
+echo
+echo "                     *** info ***"
+echo
+cd $HOME/proyectos/info && git status
+echo
+echo "                      Fin info"
+
+echo
+echo "                     *** dotfiles ***"
+echo
+cd $HOME/proyectos/dotfiles && git status
+echo
+echo "                      Fin dotfiles"
+
+echo
+echo "                     *** 230box ***"
+echo
+cd $HOME/proyectos/Arduino/230box && git status
+echo
+echo "                       Fin 230box"
+
+echo
+echo "                     *** ArduMan ***"
+echo
+cd $HOME/proyectos/Arduino/ArduMan && git status
+echo
+echo "                       Fin ArduMan"
+echo</code></pre>
+
+			<p>y gitpush.sh para actualizar los repositorios desde el servidor y subir los cambios realizados:</p>
+			<pre><code class="bash">nano ~/.gitpush.sh</code></pre>
+			<pre><code class="bash">#! /bin/bash
+
+cd $HOME/proyectos/documentos && git fetch --all && git merge origin/master --no-commit && git push -u
+cd $HOME/proyectos/info && git fetch --all && git merge origin/master --no-commit && git push -u
+cd $HOME/proyectos/dotfiles && git fetch --all && git merge origin/master --no-commit && git push -u
+cd $HOME/proyectos/Arduino/230box && git fetch --all && git merge origin/master --no-commit && git push -u
+cd $HOME/proyectos/Arduino/ArduMan && git fetch --all && git merge origin/master --no-commit && git push -u</code></pre>
+
+			<H4>Añadimos algun alias del sistema.</H4>
+			<pre><code class="bash">nano ~/.aliases</code></pre>
+			<pre><code class="bash">alias do='cd $HOME/proyectos/documentos/'
+alias in='cd $HOME/proyectos/info/'
+alias dt='cd $HOME/proyectos/dotfiles/'
+alias ar='cd $HOME/proyectos/Arduino/230box/'
+alias am='cd $HOME/proyectos/Arduino/ArduMan/'
+alias al='cd $HOME/proyectos/Arduino/arduLibs/'
+
+
+alias pu='~/.gitpush.sh'
+
+alias st='~/.gitstatus.sh'</code></pre>
+
 		</div>
+
+
 		<div class="marco">
-			<h2>Areas de trabajo</h2>
+			<h2>Areas de trabajo (Repositorios)</h2>
 
 			<h3>Creamos en local y lo subimos a remoto</h3>
 			<p>&nbsp;Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
 			Por último subimos el repositorio.</p>
 			<pre><code class="bash">mkdir nuevo-proyecto
 cd nuevo-proyecto
-init
-remote</code></pre>
+git init
+git remote</code></pre>
 			<p class="nota">Mas usos de <a href="#remote">remote</a>.</p>
 
 
 			<h3>Creamos en remoto y lo descargamos en local</h3>
+			<p>&nbsp;Es el metodo que prefiero. </br>
+			Creamos un repositorio nuevo en GitHub y lo clonamos en nuestro sitema (local).</p>
+			<pre><code class="bash">git clone HTTP://etc nombreDir</code></pre>
+			<p>&nbsp;Podemos nombrar el remoto con el alias que queramos (origin por defc.).</p>
+			<pre><code class="bash">git clone -o aliasRemoto dirRemoto</code></pre>
 
+			<h3>Cambiamos el nombre a un repositorio</h3>
+			<pre><code class="bash">git remote rename aliasRemoto aliasRemotoNuevo</code></pre>
 
 			<h3>Eliminamos un repositorio</h3>
+			<pre><code class="bash">git remote remove aliasRemoto</code></pre>
+
+			<div class="adver">
+				<strong>Advertencia:</strong>
+				<div>
+					<p>Cada vez que se cree o se elimine un repositorio debemos actualizar los archivos de configuración del 
+					<a href="#sistema">sistema</a>.<p/>
+				</div>
+			</div>
 		</div>
+
+
 		<div class="marco">
-			<h2 id=otros>Otros comandos de utilidad</h2>
-			<h3 id=remote>Remote</h3>
+			<h2 id="actual">Actual area de trabajo</h2>
+			<h3 id="status">Ver cambios</h3>
+			<p>&nbsp;Para ver una lista de los cambios realizados.</p>
+			<pre><code class="bash">git status
+# opciones
+-s	(--short) genera una lista corta donde
+		M son modificados - A son añadidos - ?? no añadidos</code></pre>
+			<h3 id="add">Añadir cambios</h3>
+			<p>&nbsp;Añadir al staged uno o varios archivos modificados.</p>
+			<pre><code class="bash">git add nombreArchivo
+git add . # Los añades todos</code></pre>
+			<h3 id="mv">Mover archivo</h3>
+			<p>&nbsp;Mover o renombrar directorios y archivos.</p>
+			<pre><code class="bash">git mv -v nombreArDir Destino
+# opciones
+-v	Vervose
+-f	fuerza aunque exista el destino
+-k	Omitir mover o renombrar acciones que podrían conducir a una condición de error. Se produce un error cuando Git no existe ni controla una fuente, o cuando sobrescribe un archivo existente a menos que se indique -f.
+-n	Hacer nada; solo muestra lo que pasaria</code></pre>
+			<h3 id="rm">Eliminar archivo</h3>
+			<p>&nbsp;Eliminar directorios y archivos.</p>
+			<pre><code class="bash">git rm nombreArDir Destino
+git rm log/\*.log	# Simbolo de escape (\) necesario para utilizar la propia expansión de git
+git rm --cached nombreArchivo # Si se ha añadido alago y queremos que deje de ser seguido por git o se nos ha olvidado incluirlo en el .gitignore</code></pre>
+			<h3 id="resetHead">Reset HEAD</h3>
+			<p>&nbsp;Antes de hacer un add te restaura el archivo al ultimo commit.</p>
+			<pre><code class="bash">git reset HEAD nombreArchivo</code></pre>
+		</div>
+
+		<div class="marco">
+			<h2 id="historial">Historial de trabajo</h2>
+			<h3 id="commit">Commits</h3>
+			<p>Se commitearan todos los archivos que estén incluidos en el staged.</br>
+			El título del commit no debe contener más de 50 caracteres.</br>
+			Para hacer un comentario más extenso se debe insertar dos saltos de línea, cada línea no puede contener más de 72 caracteres.</br>
+			Un commit bien redactado debe contener tres apartados:
+			<ol>
+				<li>Un porqué del cambio</li>
+				<li>Qué se ha cambiado</li>
+				<li>Resultado del cambio</li>
+			</ol></p>
+			<pre><code class="bash">git commit
+# opciones
+-a				Hace un add de todos los cambios y los comitea
+nomArc				Comitea el archivo concreto antes de commitearlo todo
+-m 'Este es mi commit'	Añadir un commit corto.
+--amend			Resescribe el ultimo commit</code></pre>
+			<div class="adver">
+				<strong>Advertencia:</strong>
+				<div>
+					<p>Antes de commitear un cambio del staged debes asegurate que no queden espacios en blanco huerfanos.<p/>
+					<pre><code class="bash">diff --check</code></pre>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+
+		<div class="marco">
+			<h2 id="otros">Otros comandos de utilidad</h2>
+			<h3 id="remote">Remote</h3>
 			<pre><code class="bash">remote -v       # Muestra los repo remotos que tengamos
 remote show aliasRemoto	# Muestra mas informacion
 remote add aliasRemoto direccionRepositorio    # añadimos y descargamos en vez de clone
