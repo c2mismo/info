@@ -54,6 +54,7 @@ body {
 	background: #002b36;
 }
 
+
 section > div {
 	width: 98%;
 	text-align: center;
@@ -133,7 +134,9 @@ article > div > p {
 .adver > div {
 	padding: 0 0 0 3.125rem;
 }
-
+.aDark:link, .aDark:visited {
+	color: #4b2367;
+}
 img {
 	display: block;
   margin-left: auto;
