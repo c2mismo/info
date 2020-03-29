@@ -1,7 +1,7 @@
 a {
   outline: none;
   /* text-decoration: none; */
-  padding: 2px 1px 0;
+  padding: 0.125rem 0.0625rem 0;
 }
 /* El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. */
 a:link, a:visited {
@@ -14,13 +14,12 @@ a:visited {
 /* Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab
 del teclado o se le da el foco mediante programación usando HTMLElement.focus()). */
 a:focus {
-  border-bottom: 1px solid;
+  border-bottom: 0.0625rem solid;
   background: #7dbbb9;
   color: #002b36;
 }
 /* Un enlace cuando se le pasa el cursor por encima. */
 a:hover {
-  border-bottom: 1px solid;     
   background: #7dbbb9;
   color: #002b36;
 }
@@ -28,4 +27,8 @@ a:hover {
 a:active {
   background: #7dbbb9;
   color: #002b36;
-} 
+}
+
+.adver > a:link, a:visited {
+	color: #4b2367;
+}

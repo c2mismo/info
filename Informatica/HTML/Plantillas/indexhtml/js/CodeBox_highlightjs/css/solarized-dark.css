@@ -10,8 +10,8 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
   padding: 0.5em;
   background: #002b36;
   color: #839496;
-	border-left: 7px solid #0c7b93;
-  border-radius: 5px;
+	border-left: 0.4375em solid #0c7b93;
+  border-radius: 0.3125em;
 }
 
 .hljs-comment,

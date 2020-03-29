@@ -4,14 +4,14 @@
 
 <HEAD>
 	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<TITLE>c2mismo GIT</TITLE>
 	<!-- Estilo CSS personal -->
 	<link href="../HTML/Plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
 	<link href="../HTML/Plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
-	<link href="../HTML/Plantillas/indexhtml/css/bibliographic.css" rel="stylesheet" type="text/css">
 	<link href="../HTML/Plantillas/indexhtml/css/media600.css" rel="stylesheet" type="text/css">
-	<link href="../HTML/Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="	text/css">
+	<!-- <link href="../HTML/Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="	text/css">
 	
 	<!-- Estilo CSS code-highlightjs con estilo Solarized y tres fondos -->
 	<!-- <link rel="stylesheet" href="styles/solarized-light.css">  -->
@@ -27,9 +27,11 @@
 	<header>
 		<div class=flexHeader>
 			<h1>c2mismo - Manuales diversos</h1>
+			<div>
 			<a href="../../index.html" target="_blank">
 				<img src="../HTML/Plantillas/indexhtml/img/menu1.svg" alt="Menu">
 			</a>
+			</div>
 		</div>
 	</header>
 	<!-- BUTTONS
@@ -93,6 +95,7 @@
 					<li><a href="#historial">Historial de trabajo</a>
 						<ol>
 							<li><a href="#commit">Commits</a></li>
+							<li><a href="#diff">Diff</a></li>
 						</ol>
 					</li>
 					<li><a href="#otros">Otros</a>
@@ -313,7 +316,13 @@ nomArc				Comitea el archivo concreto antes de commitearlo todo
 					<pre><code class="bash">diff --check</code></pre>
 				</div>
 			</div>
-
+			<h3 id="diff">Diff</h3>
+			<p>&nbsp;Muestra los cambios antes de incluirlo en el staged.</p>
+			<pre><code class="bash">git diff
+# opciones
+--staged
+--check
+</code></pre>
 
 
 
