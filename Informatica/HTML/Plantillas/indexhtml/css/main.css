@@ -97,6 +97,7 @@ article > .marco {
 article > div > h2 {
 	color: #00a8cc;
 	font-size:  2.5rem;
+	line-height: 2.5rem;
 	padding: 0;
 }
 article > div > h3 {
