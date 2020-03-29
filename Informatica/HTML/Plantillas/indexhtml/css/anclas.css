@@ -29,6 +29,9 @@ a:active {
   color: #002b36;
 }
 
-.adver > a:link, a:visited {
+.adver > div > a:link {
+	color: #4b2367;
+}
+.adver > div > a:visited {
 	color: #4b2367;
 }
