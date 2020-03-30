@@ -4,6 +4,7 @@
 
 <HEAD>
 	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<TITLE>c2mismo - index</TITLE>
 	<!-- Estilo CSS personal -->
@@ -13,7 +14,6 @@
 	<link href="Informatica/HTML/Plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
 	<!-- <link href="indexhtml/css/bibliographic.css" rel="stylesheet" type="text/css">  -->
 	<link href="Informatica/HTML/Plantillas/indexhtml/css/media600.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="text/css">
 	
 	<!-- Estilo CSS code-highlightjs con estilo Solarized y tres fondos  -->
 	<!-- <link rel="stylesheet" href="styles/solarized-light.css">  -->
@@ -22,6 +22,10 @@
 	<script src="indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>  -->
 	
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+	<script src="Informatica/HTML/Plantillas/indexhtml/js/nav.js"></script>
+
 
 </HEAD>
 
@@ -32,14 +36,26 @@
 			<!-- <img src="indexhtml/img/menu1.svg" alt="Menu"> -->
 		</div>
 	</header>
+
+	<!-- DOCUMENT TITTLE -->
+
+	<section>
+		<div>
+			<h1>Manuales y documentos de c2mismo</h1>
+			<p class="test">Estos manuales no pretenden ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+		</div>
+	</section>
+
 	<!-- BUTTONS -->
 
 	<nav>
-		<button class="navButton" onclick="navMenu()">Menu</button>
+		<button class="navButton" onclick="navMenu()"><strong>Menu</strong></button>
 		<button class="navBar hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
 		<button class="navBar hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
 		<button class="navBar hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
 	</nav>
+
 	<!-- MENU DIRECTORIES -->
 
 	<div id="menuArduino" class="dirArduino hidden">
@@ -57,16 +73,6 @@
 		<a class="aRed" href="Informatica/git/git.html">
 		Manual GIT</a><br>
 	</div>
-
-	<!-- DOCUMENT TITTLE -->
-
-	<section>
-		<div>
-			<h1>Manuales y documentos de c2mismo</h1>
-			<p>Estos manuales no pretenden ser una guía completa sobre el tema a tratar,
-			mas bien una guía rápida y escueta.</p>
-		</div>
-	</section>
 
 	<!-- DOCUMENT
 
@@ -100,42 +106,9 @@
 		</p>
 	</footer>
 
-	<!-- JS -->
 
-	<script>
-		function navMenu(){
-			var ancla = document.getElementsByClassName('navBar');
-			for(var i = 0; i < ancla.length; i++){
-				ancla[i].classList.toggle('hideLikeMovil');
-			}
-		}
-	</script>
-	<script>
-		function navMenuArduino(){
-			var anclaArduino = document.getElementsByClassName('dirArduino');
-			for(var i = 0; i < anclaArduino.length; i++){
-				anclaArduino[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<script>
-		function navMenuElectronica(){
-			var anclaElectronica = document.getElementsByClassName('dirElectronica');
-			for(var i = 0; i < anclaElectronica.length; i++){
-				anclaElectronica[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<script>
-		function navMenuInformatica(){
-			var anclaInformatica = document.getElementsByClassName('dirInformatica');
-			for(var i = 0; i < anclaInformatica.length; i++){
-				anclaInformatica[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<!-- document.getElementsByClassName('directories'); -->
-	<!-- document.getElementById('menuArduino'); -->
+
+
 
 </BODY>
 
