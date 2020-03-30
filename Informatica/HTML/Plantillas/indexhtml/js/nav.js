@@ -8,28 +8,19 @@ function navMenu(){
 }
 // muestran y ocultan los menus temáticos
 function navMenuArduino(){
-	let anclaArduino = document.getElementById('menuArduino');
-	anclaArduino.classList.toggle('hidden');
-	let anclaElectronica = document.getElementById('menuElectronica');
-	anclaElectronica.classList.add('hidden');
-	let anclaInformatica = document.getElementById('menuInformatica');
-	anclaInformatica.classList.add('hidden');
+	document.getElementById('menuArduino').classList.toggle('hidden');
+	document.getElementById('menuElectronica').classList.add('hidden');
+	document.getElementById('menuInformatica').classList.add('hidden');
 }
 
 function navMenuElectronica(){
-	let anclaElectronica = document.getElementById('menuElectronica');
-	anclaElectronica.classList.toggle('hidden');
-	let anclaArduino = document.getElementById('menuArduino');
-	anclaArduino.classList.add('hidden');
-	let anclaInformatica = document.getElementById('menuInformatica');
-	anclaInformatica.classList.add('hidden');
+	document.getElementById('menuElectronica').classList.toggle('hidden');
+	document.getElementById('menuArduino').classList.add('hidden');
+	document.getElementById('menuInformatica').classList.add('hidden');
 }
 
 function navMenuInformatica(){
-	let anclaInformatica = document.getElementById('menuInformatica');
-	anclaInformatica.classList.toggle('hidden');
-	let anclaArduino = document.getElementById('menuArduino');
-	anclaArduino.classList.add('hidden');
-	let anclaElectronica = document.getElementById('menuElectronica');
-	anclaElectronica.classList.add('hidden');
+	document.getElementById('menuInformatica').classList.toggle('hidden');
+	document.getElementById('menuArduino').classList.add('hidden');
+	document.getElementById('menuElectronica').classList.add('hidden');
 }
