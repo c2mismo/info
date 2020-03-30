@@ -1,65 +1,76 @@
 nav {
+	width: 98%;
 	background: #27496d;
-	border: 3px solid #0c7b93;
-	margin: 50px 20px 0px 20px;
-	padding: 10px 20px;
+	border: 0.1875rem solid #0c7b93;
+	border-radius: 0.4rem  0.4rem 1.25rem 1.25rem;
+	margin: 0 auto;
+	margin-top: 3.125rem;
+	padding: 0.625rem 1.25rem;
 	display: flex;
 	justify-content: space-around; /* center space-between flex-end */
 }
 .navBar{
-	display: inline-block;
-	background: #0c7b93;
-	color: #550000;
-	padding: 10px 10px;
-	margin: 10px;
-	text-decoration: none;
-  font-weight: 450;
+	display: block;
+	background: #2eb8b8; /* 00a8cc  0c7b93 00a8cc*/
+	color: #002b36;
+	padding: 0.625rem 0.625rem;
+	margin: 0.625rem;
+	border: 0.2rem solid #adebeb; /* fff */
+  border-radius: 0.8rem 0.3rem;
+	letter-spacing: 0.1rem;
 }
 .navBar:hover{ /* raton sobre */
 	background: #7dbbb9;
 }
 .navBar:active{ /* click raton */
 	background: #002b36;
-	color: #7dbbb9;
+	color: #2eb8b8;
+	border: 0.2rem solid #003d4d;
 }
 .navButton{
-	background: #7dbbb9;
-	color: #550000;
-	padding: 10px 10px;
-	margin: 10px;
-	border: 2px solid #fff;
+	font-size: 1.875rem;
+	background: #2eb8b8;
+	color: #002b36;
+	padding: 0.625rem 0.625rem;
+	margin: 0.625rem;
+	border: 0.2rem solid #adebeb; /* fff */
+	border-radius: 0.8rem 0.3rem;
+	letter-spacing: 0.1rem;
 	display: none;
 }
 .navButton:hover{ /* raton sobre */
-	background: #0c7b93;
+	background: #7dbbb9;
 }
 .navButton:active{ /* click raton */
 	background: #002b36;
-	color: #7dbbb9;
+	color: #2eb8b8;
+	border: 0.2rem solid #003d4d;
 }
 
 
 .actualDirectory {
-  color: #550000; /* Color en hexadecimal */
+	width: 80%;
+  color: #550000;
   background: #0c7b93;
-	margin: 0 20px; /*margen (arriba y abajo) (Izq y derecha) */
-	padding: 0; /* Margen dentro */
-	display: flex;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .formatActDir {
-	margin: 0 20px;
+	margin: 0 1.25rem;
 	padding: 0;
 }
 
 
 .dirArduino, .dirElectronica, .dirInformatica {
+	width: 80%;
   color: #002b36;
   background: #0c7b93;
-	margin: 2px 40px;
-	padding: 20px 30px;
+	margin: 0 auto;
+	padding: 1.25rem 1.875rem;
+  border-radius: 0 0 1.25rem 1.25rem;
 }
 
 .hidden {
-		display: none;
+	display:none;
 } 
