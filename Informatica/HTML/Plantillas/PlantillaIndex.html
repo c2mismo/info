@@ -12,6 +12,10 @@
 	<link href="indexhtml/css/anclasRed.css" rel="stylesheet" type="text/css">
 	<link href="indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
 	<link href="indexhtml/css/media600.css" rel="stylesheet" type="text/css">
+	<!-- Estilo fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<!-- Java-Script -->
+	<script src="Informatica/HTML/Plantillas/indexhtml/js/nav.js"></script>
 	
 
 </HEAD>
@@ -25,25 +29,29 @@
 	<!-- BUTTONS -->
 
 	<nav>
-		<button class="navButton" onclick="navMenu()">Menu</button>
+		<button class="navButton" onclick="navMenu()">
+		<strong>Menu</strong></button>
 		<button class="navBar hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
 		<button class="navBar hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
 		<button class="navBar hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
 	</nav>
+
 	<!-- MENU DIRECTORIES -->
 
-	<div id="menuArduino" class="dirArduino hidden">
+	<div id="menuArduino" class="menuDir hidden">
 		<p>Enlaces a manuales de Arduino</p>
 	</div>
 
-	<div id="menuElectronica" class="dirElectronica hidden">
+	<div id="menuElectronica" class="menuDir hidden">
 		<p>Enlaces a manuales de Electronica</p>
 	</div>
 
-	<div id="menuInformatica" class="dirInformatica hidden">
+	<div id="menuInformatica" class="menuDir hidden">
 		<p>Enlaces a manuales de Informatica</p>
 		<a class="aRed" href="Informatica/HTML/HTML.html">
 		Manual HTML</a><br>
+		<a class="aRed" href="Informatica/git/git.html">
+		Manual GIT</a><br>
 	</div>
 
 	<!-- DOCUMENT TITTLE -->
@@ -64,42 +72,6 @@
 			c2mismo, 2020</p>
 	</footer>
 
-	<!-- JS -->
-
-	<script>
-		function navMenu(){
-			var ancla = document.getElementsByClassName('navBar');
-			for(var i = 0; i < ancla.length; i++){
-				ancla[i].classList.toggle('hideLikeMovil');
-			}
-		}
-	</script>
-	<script>
-		function navMenuArduino(){
-			var anclaArduino = document.getElementsByClassName('dirArduino');
-			for(var i = 0; i < anclaArduino.length; i++){
-				anclaArduino[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<script>
-		function navMenuElectronica(){
-			var anclaElectronica = document.getElementsByClassName('dirElectronica');
-			for(var i = 0; i < anclaElectronica.length; i++){
-				anclaElectronica[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<script>
-		function navMenuInformatica(){
-			var anclaInformatica = document.getElementsByClassName('dirInformatica');
-			for(var i = 0; i < anclaInformatica.length; i++){
-				anclaInformatica[i].classList.toggle('hidden');
-			}
-		}
-	</script>
-	<!-- document.getElementsByClassName('directories'); -->
-	<!-- document.getElementById('menuArduino'); -->
 
 </BODY>
 
