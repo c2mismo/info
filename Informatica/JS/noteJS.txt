@@ -1,0 +1,34 @@
+
+
+// arrays
+/*
+["joe", "ryan", "martha"]
+*/
+// object
+/*
+{
+	"username": "ryan",
+	"score": 70.4,
+	"hours": 14,
+	"proffesional": true,
+	"clave": "valor"
+}
+*/
+
+var nameuser = "pepe";
+let lastname = "polla";
+
+nameuser = "otro";
+
+const PI = 3.1415;
+
+console.log(PI)
+
+// el nombre la variable no puede comenzar con un numero
+ 
+let numberUno = 60;
+let numberDos = 100;
+
+let result = numberUno + numberDos;
+
+console.log (result)
