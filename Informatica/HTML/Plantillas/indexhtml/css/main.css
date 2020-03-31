@@ -161,16 +161,6 @@ img {
 	height: 100%;
 }
 
-.youtube {
-	frameborder: "0";
-	allow: accelerometer;
-	allow: autoplay;
-	allow: encrypted-media;
-	allow: gyroscope;
-	allow: picture-in-picture;
-	allowfullscreen;
-}
-
 details {
 	width: 98%;
 	border-style: solid;
