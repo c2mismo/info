@@ -1,46 +1,20 @@
 @media only screen and (orientation: portrait) {
-  body {
-    line-height: 1.4;
-    letter-spacing: 0rem;
-		font-size:  25px;
-  }
   .flexHeader {
-		margin: 0 auto;
-		margin-top: 50px;
-  }
-  .flexHeader > h1 {
-		font-size: 45px;
-  }
-	nav {
-		margin: 50px 0 0 0;
+		margin-top: 1rem;
+		width: 100%;
 	}
-	.navBar {
-		font-size:  23px;
-		font-weight: 450;
-	}
-	.dirArduino, .dirElectronica, .dirInformatica {
-		margin: 2px 20px;
+	nav{
+		margin-top: 1rem;
 	}
 	section > div {
-		margin: 0;
-		margin-top: 50px;
-	}
-	section > div > h1 {
-		font-size:  55px;
+		margin-top: 1rem;
+		width: 100%;
 	}
 	article > .marco {
-		margin: 20px 0 20px 0;
-	}
-	article > div > h2 {
-		font-size:  55px;
-	}
-	article > div > h3 {
-		font-size:  40px;
-	}
-	article > div > h4 {
-		font-size:  35px;
+		width: 100%;
+		margin: 0.50rem auto;
 	}
 	details {
-		margin: 0;
+		width: 100%;
 	}
 }
