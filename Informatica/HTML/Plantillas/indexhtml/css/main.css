@@ -32,6 +32,7 @@ body {
 
 .flexHeader > h1 {
 	font-size: 1.875rem;
+	line-height: 2rem;
 	color: #002b36;
 	width: 80%;
 }
@@ -50,11 +51,9 @@ body {
   border-radius: 0.625rem;
   float: right;
 }
-
 .flexHeader > a:hover {
 	background: #002b36;
 }
-
 
 section > div {
 	width: 98%;
@@ -68,11 +67,11 @@ section > div {
 	border-color: #0c7b93;
   border-radius: 1.25rem 1.25rem 0.4rem  0.4rem;
 }
-
 section > div > h1 {
 	padding: 1rem 1rem;
 	color: #7dbbb9;
 	font-size:  2.5rem;
+	line-height: 3rem;
 	border-style: solid;
 	border-color: #7dbbb9;
   border-radius: 1.25rem;
@@ -114,7 +113,6 @@ article > div > h4 {
 	color: #00a8cc;
 	font-size:  1.25rem;
 }
-
 article > div > p {
 	padding: 1.875rem 0 0 0;
 }
@@ -140,6 +138,7 @@ article > div > p {
 .aDark:link, .aDark:visited {
 	color: #4b2367;
 }
+
 img {
 	display: block;
   margin-left: auto;
@@ -147,7 +146,6 @@ img {
 	max-width: 100%;
   height: auto;
 }
-
 
 details {
 	width: 98%;
@@ -163,6 +161,4 @@ footer {
 	text-align: center;
 	position: relative;
 	color: #7dbbb9;
-	padding: 0.625rem 0.625rem;
-	margin: 0.625rem 1.25rem;
 }
