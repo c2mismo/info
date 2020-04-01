@@ -115,6 +115,7 @@ article > div > h4 {
 }
 article > div > p {
 	padding: 1.875rem 0 0 0;
+	max-width: 60rem;
 }
 
 .nota {
