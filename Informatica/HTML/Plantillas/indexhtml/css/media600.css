@@ -1,11 +1,10 @@
 /* para dispositivo con menos de 600px */
 @media (max-width: 600px) {
-	nav{
-		background: #27496d;
-		flex-direction: column;
+	.navBar{
+		display: grid;
 	}
-	.navButton{
-		display: inline-block;
+	.navExpandButton{
+		display: block;
 	}
 	.hideLikeMovil{
 		display: none;

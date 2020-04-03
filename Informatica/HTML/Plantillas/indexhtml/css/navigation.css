@@ -1,15 +1,14 @@
-nav {
-	width: 98%;
-	background: #27496d;
-	border: 0.1875rem solid #0c7b93;
-	border-radius: 0.4rem  0.4rem 1.25rem 1.25rem;
-	margin: 0 auto;
-	margin-top: 3.125rem;
-	padding: 0.625rem 1.25rem;
+.navBar {
 	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	background: #27496d;
+	border-radius: 1.25rem;
+	margin: 0 auto;
+	padding: 0.625rem 1.25rem;
 	justify-content: space-around; /* center space-between flex-end */
 }
-.navBar{
+.navMenu{
 	display: block;
 	background: #2eb8b8; /* 00a8cc  0c7b93 00a8cc*/
 	color: #002b36;
@@ -18,16 +17,17 @@ nav {
 	border: 0.2rem solid #adebeb; /* fff */
   border-radius: 0.8rem 0.3rem;
 	letter-spacing: 0.1rem;
+	cursor: pointer;
 }
-.navBar:hover{ /* raton sobre */
+.navMenu:hover{ /* raton sobre */
 	background: #7dbbb9;
 }
-.navBar:active{ /* click raton */
+.navMenu:active{ /* click raton */
 	background: #002b36;
 	color: #2eb8b8;
 	border: 0.2rem solid #003d4d;
 }
-.navButton{
+.navExpandButton{
 	font-size: 1.875rem;
 	background: #2eb8b8;
 	color: #002b36;
@@ -38,10 +38,10 @@ nav {
 	letter-spacing: 0.1rem;
 	display: none;
 }
-.navButton:hover{ /* raton sobre */
+.navExpandButton:hover{ /* raton sobre */
 	background: #7dbbb9;
 }
-.navButton:active{ /* click raton */
+.navExpandButton:active{ /* click raton */
 	background: #002b36;
 	color: #2eb8b8;
 	border: 0.2rem solid #003d4d;
@@ -67,10 +67,10 @@ nav {
   color: #002b36;
   background: #0c7b93;
 	margin: 0 auto;
-	padding: 1.25rem 1.875rem;
+	padding: 0.5rem 1.875rem;
   border-radius: 0 0 1.25rem 1.25rem;
 }
 
 .hidden {
 	display:none;
-} 
+}
