@@ -1,0 +1,81 @@
+
+
+.contNavBar {
+  overflow: hidden;
+  z-index: 50;
+  background-color: #33333355;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBar .contLaterales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+}
+.navBar .c2mismo {
+	font-size: 1.875rem;
+	color: #000000;
+  text-shadow: 0px 0px 9px #7dbbb9;
+}
+
+.navBar .contH1 {
+  width: auto;
+  text-align: center;
+}
+.navBar .h1Center {
+	color: #7dbbb9;
+	font-size: 1.875rem;
+	padding: 0.8rem;
+	border-style: solid;
+	border-color: #7dbbb9;
+  border-radius: 2rem;
+}
+
+.navBar .menuBtn {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: -2.7rem;
+	background: #4588cf33;
+	border: 0rem;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+	cursor: pointer;
+}
+.navBar .lineBtn {
+  width: 30px;
+  height: 2px;
+  background-color: #00a8cc;
+  margin: 9px auto;
+	border-radius: 0.625rem;
+}
+.navBar .menuBtn:hover {
+	background: #84aedb33;
+}
+.navBar .menuBtn:active {
+	background: #002b3633;
+}
+.navBar .lineBtn:active {
+  background-color: #111111;
+}
+
+@media (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+  }
+  .navBar .contLaterales {
+    width: auto;
+  }
+  .navBar .menuBtn {
+    margin-right: 0rem;
+  margin-bottom: 1rem;
+  }

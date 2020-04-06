@@ -1,0 +1,148 @@
+body {
+  transition: background-color .5s;
+}
+
+#menuNav {
+  height: 100%;
+  width: 0;
+  max-width: 100%;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  background-color: #002b36;
+  overflow-x: hidden;
+  transition: 2.5s;
+  padding-top: 32px;
+}
+#menuNav .menuNavBtn {
+  display: block;
+  float: right;
+  width: 70%;
+  margin-bottom: 1px;
+  padding: 8px 8px 8px 5%;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: left;
+  color: #818181;
+  background-color: #084757;
+  border: 1rem, solid;
+  transition: 0.3s;
+	cursor: pointer;
+}
+#menuNav .menuNavBtn2 {
+  display: block;
+  float: right;
+  width: 80%;
+  margin-bottom: 1px;
+  padding: 8px 8px 8px 15%;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: left;
+  color: #f1f1f1;
+  background-color: #084757;
+  border: 1rem, solid,;
+  transition: 0.3s;
+	cursor: pointer;
+}
+#menuNav .contDivMenu {
+  display: block;
+  float: right;
+  z-index: 90;
+  width: 100%;
+  height: auto;
+}
+#menuNav .contSplitMenuNav {
+  display: block;
+  width: 90%;
+}
+#menuNav .splitMenuenuNav {
+  display: block;
+  float: right;
+  width: 80%;
+  height: 1rem;
+  margin-top: 1.5rem;
+  padding: 8px 8px 8px 5%;
+  background-color: #084757;
+  border: 0rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+  transition: 0.3s;
+}
+#menuNav .menuNavBtn:hover {
+  color: #f1f1f1;
+}
+
+
+#menuNav .center {
+	position: relative;
+  display: inline-block;
+}
+
+#menuNav ol, li {
+  text-align: left;
+	color: #00a8cc;
+}
+
+
+
+
+#menuNav .hidden {
+  display: none;
+}
+
+
+
+#menuNav .closeMenuBtn {
+  z-index: 91;
+  position: fixed;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 40rem;
+}
+#menuNav .closeMenuBtn {
+  text-align: center;
+  font-family:arial;
+  font-size: 2rem;
+	color: #00a8cc;
+	margin: 1.35rem;
+	background: #4588cf33;
+	border: 0rem;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+	cursor: pointer;
+  transition: 0.5s;
+}
+#menuNav .closeMenuBtn:hover {
+	background: #84aedb33;
+	border: 0rem;
+}
+#menuNav .closeMenuBtn:active {
+	background: #002b3633;
+	border: 0rem;
+}
+
+
+
+#menuNav .indiceDeco {
+  width: 92%;
+  margin: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  height: 900px;
+  border: 0;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+}
+#menuNav iframe {
+  width: 92%;
+  margin: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  height: 900px;
+  border: 0;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+}

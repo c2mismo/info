@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+/*
 function navShow() {
   /* Mostramos la barra de menus */
   let nBar = document.getElementsByClassName("navBar");
@@ -26,7 +38,7 @@ function navShow() {
 
   }
 }
-
+*/
 
 /* document.getElementById().addEventListener('click', nombreFunction); */
 /* let span = document.getElementsByTagName("button")[1].classList[0]; */

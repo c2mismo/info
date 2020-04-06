@@ -17,21 +17,62 @@
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
 	<script src="Informatica/HTML/Plantillas/indexhtml/js/nav.js"></script>
 
+	<script type="text/javascript">
+
+		function sizeFrame() {
+			var F = document.getElementById("mainframe");
+			if(F.contentDocument) {
+			F.height = F.contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
+			} else {
+			F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
+			}
+		}
+
+		window.onload=sizeFrame;
+
+		function autoIframe(mainframe){
+			try{
+				frame = document.getElementById(mainframe);
+				innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
+				if (innerDoc == null){
+											// Google Chrome
+					frame.height = document.all[mainframe].clientHeight + document.all[mainframe].offsetHeight + document.all[mainframe].offsetTop;
+				}
+				else{
+				objToResize = (frame.style) ? frame.style : frame;
+				objToResize.height = innerDoc.body.scrollHeight + 18;	//  + "px"
+				}
+			}
+			catch(err){
+							alert('Err: ' + err.message);
+					window.status = err.message;
+			}
+		}
+		</script>
 
 </HEAD>
 
 <BODY>
-	<header>
-		<div class=flexHeader>
-			<h1>c2mismo - Manuales diversos</h1>
-			<button class="boton" onclick="navShow()">
-				<img src="Informatica/HTML/Plantillas/indexhtml/img/menu1.svg" alt="Menu">
-			</button>
-		</div>
-	</header>
+
+
+	<!-- navbar -->
+
+	<div class="navbar">
+		<a href="#home">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+	</div>
+
+	<!-- iframe superior con JS esta escrito arriba
+	<div class="iframe-container">
+		<iframe src="Informatica/HTML/Plantillas/indexhtml/nav.html" scrolling="no" framborder="0" width="100%" id="mainframe" name="frame" onload="if (window.parent && window.parent.autoIframe) {window.parent.autoIframe('mainframe');}">
+		Tu navegador no soporta iFrames. Prueba con FireFox</iframe>
+	</div> -->
+
 
 	<!-- DOCUMENT TITTLE -->
 
@@ -43,36 +84,7 @@
 		</div>
 	</section>
 
-	<!-- BUTTONS -->
 
-	<nav>
-		<div class="navBar">
-			<button class="navExpandButton" onclick="navExpand()"><strong>Menu</strong></button>
-			<button class="navMenu hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
-			<button class="navMenu hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
-			<button class="navMenu hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
-		</div>
-	</nav>
-
-	<!-- MENU DIRECTORIES -->
-
-	<div id="menuArduino" class="menuDir hidden">
-		<p>Enlaces a manuales de Arduino</p>
-	</div>
-
-	<div id="menuElectronica" class="menuDir hidden">
-		<p>Enlaces a manuales de Electronica</p>
-	</div>
-
-	<div id="menuInformatica" class="menuDir hidden">
-		<p>Enlaces a manuales de Informatica</p>
-		<a class="aRed" href="Informatica/HTML/HTML.html">
-		Manual HTML</a><br>
-		<a class="aRed" href="Informatica/git/git.html">
-		Manual GIT</a><br>
-		<a class="aRed" href="Informatica/Webinar/Webinar.html">
-			Manual Webinar</a><br>
-	</div>
 
 	<!-- DOCUMENT
 
@@ -93,7 +105,7 @@
 		<p></br>
 			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
 			</a></br>
 			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 		</p>
@@ -106,7 +118,3 @@
 </BODY>
 
 </HTML>
-
-
-
-

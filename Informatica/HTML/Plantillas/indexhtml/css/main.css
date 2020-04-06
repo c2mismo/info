@@ -16,89 +16,70 @@ body {
 	background: #002b36;
 	line-height: 1.6rem;
 	letter-spacing: 0.05rem;
+	padding: 0px;
+	padding-top: 7rem;
+	margin: 0px;
 }
 
-.flexHeader {
-	display: flex;
-	flex-wrap: no-wrap;
-	background: #27496d;
-	align-items: baseline;
-	width: 98%;
-	margin: 0 auto;
-	margin-top: 3.125rem;
-	padding: 1rem 1.875rem 0.00625em 1.875rem;
-  border-radius: 1.25rem;
+#initBtn {
+  z-index: 70;
+  display: none;
+  position: fixed;
+  outline: none;
+  bottom: 1.25rem;
+  right: 1.9rem;
 }
 
-.flexHeader > h1 {
-	font-size: 1.875rem;
-	line-height: 2rem;
-	color: #002b36;
-	width: 95%;
-}
-.flexHeader > div {
-	width: 5%;
-	background: #fff;
-}
-.boton {
-	padding: 0.5625rem 0.4375rem;
-	border-style: solid;
-	border-color: #002b36;
+#initBtn {
+  width: 3.125rem;
+  height: 3.125rem;
+	color: #00a8cc;
+  font-size: 1.125rem;
+	text-align: center;
+  padding-bottom: 0.5rem;
+	background: #4588cf33;
+	border: 0rem;
 	border-radius: 0.625rem;
-	background: #27496d;
+  box-shadow: 0 0 0.57rem #7dbbb9;
 	cursor: pointer;
 }
-.flexHeader > .boton:hover {
-	background: #0c7b93;
+#initBtn:hover {
+	background: #002b3633;
+	border: 0rem;
+}
+#initBtn:active {
+	background: #002b3633;
+	border: 0rem;
 }
 
-/* obsolet for index.html */
-.flexHeader > div > a {
-  width: 2.5rem;
-	height: 2.5rem;
-	padding: 0.5625rem 0.4375rem;
-	border-style: solid;
-	border-color: #002b36;
-  border-radius: 0.625rem;
-  float: right;
-}
-.flexHeader > div > a:hover {
-	background: #002b36;
-}
-/* END obsolet for index.html */
 
-section > div {
+article p::first-letter {
+	font-family: 'Tangerine', cursive;
+  font-size: 200%;
+}
+
+.initMarco {
 	width: 98%;
 	text-align: center;
 	background: #27496d;
 	color: #00a8cc;
 	padding: 1.875rem 1.875rem;
 	margin: 0 auto;
-	margin-top: 3.125rem;
 	border-style: solid;
 	border-color: #0c7b93;
   border-radius: 1.25rem 1.25rem 0.4rem  0.4rem;
 }
-section > div > h1 {
-	padding: 1rem 1rem;
-	color: #7dbbb9;
-	font-size:  2.5rem;
-	line-height: 3rem;
-	border-style: solid;
-	border-color: #7dbbb9;
-  border-radius: 1.25rem;
-}
 
-.center {
+.initMarco .center {
 	position: relative;
   display: inline-block;
 }
 
-ol, li {
+.initMarco ol, li {
 	text-align: left;
 }
 
-article > .marco {
+.marco {
 	width: 98%;
 	color: #7dbbb9;
 	background: #27496d;
@@ -107,13 +88,18 @@ article > .marco {
 	padding: 1.25rem;
 	margin: 1.25rem auto;
 }
-article > div > h2 {
+.marco p {
+	padding: 1.875rem 0 0 0;
+	max-width: 60rem;
+	max-width: 800px;
+}
+.marco h2 {
 	color: #00a8cc;
 	font-size:  2.5rem;
 	line-height: 2.5rem;
 	padding: 0;
 }
-article > div > h3 {
+.marco h3 {
 	width: 80%;
 	color: #00a8cc;
 	font-size:  1.5625rem;
@@ -121,14 +107,14 @@ article > div > h3 {
 	border-color: #0c7b93;
 	padding: 1.25rem 1.5625rem;
 }
-article > div > h4 {
+.marco h4 {
 	color: #00a8cc;
 	font-size:  1.25rem;
 }
-article > div > p {
-	padding: 1.875rem 0 0 0;
-	max-width: 60rem;
-}
+
+
+
+
 
 .nota {
 	color: #437A16;
@@ -136,7 +122,8 @@ article > div > p {
 	padding: 0 1.875rem;
 }
 
-.adver {
+
+.adverContainer {
 	color: #741529;
 	background: #00a8cc;
 	border-left: 0.4375rem solid #741529; /* 721b65 53149d 882367  */
@@ -145,14 +132,14 @@ article > div > p {
 	margin: 3.125rem auto;
 	padding: 0.625rem 1.875rem;
 }
-.adver > div {
+.adverText {
 	padding: 0 0 0 3.125rem;
 }
 .aDark:link, .aDark:visited {
 	color: #4b2367;
 }
 
-img {
+.imgCenter {
 	display: block;
   margin-left: auto;
   margin-right: auto;
@@ -173,6 +160,7 @@ img {
 	width: 100%;
 	height: 100%;
 }
+
 
 details {
 	width: 98%;

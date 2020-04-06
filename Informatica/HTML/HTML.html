@@ -15,6 +15,7 @@
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="Plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
 	<script src="Plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
@@ -26,7 +27,7 @@
 <BODY>
 	<header>
 		<div class=flexHeader>
-			<h1>c2mismo - Manuales diversos</h1>
+			<p class=flexHeaderH1>c2mismo - Manuales diversos</p>
 			<button class="boton" onclick="navShow()">
 				<img src="../HTML/Plantillas/indexhtml/img/menu1.svg" alt="Menu">
 			</button>
@@ -38,8 +39,10 @@
 	<section>
 		<div>
 			<h1>Manual HTML</h1>
-			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
-			mas bien una guía rápida y escueta.</p>
+			<div>
+				<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+				mas bien una guía rápida y escueta.</p>
+			</div>
 		</div>
 	</section>
 
@@ -47,7 +50,7 @@
 
 	<article>
 		<div class="marco">
-			<h2>subtitulo H2</h2><BR>
+			<h2>subtitulo H2</h2><br />
 			<p>Es parrafo <b>negrita</b>, <i>italica</i>.</p>
 
 
@@ -66,14 +69,15 @@
 			<a href="#">Esto es un enlace "ancla"</a>
 
 			<div class=adver>
-			<strong>Advertencia:</strong>
-			<div>
-			<p>
-			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
-			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
-			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
-			</p>
-			</div></div>
+				<strong>Advertencia:</strong>
+				<div>
+					<p>
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					</p>
+				</div>
+			</div>
 
 			<pre><code>&lt;!DOCTYPE html&gt;</code></pre> — es codigo.
 
@@ -92,7 +96,7 @@
 			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
 			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
 			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
-			</p></br></br>
+			</p><br /><br />
 
 
 			<a href="http://paginaspersonales.deusto.es/airibar/Ed_digital/Ed_digital.html">Apuntes claros y escuetos sobre HTML	&lt;5 y CSS</a>
@@ -104,11 +108,11 @@
 		</div>
 			<div class="marco">
 			<h2>Imagenes</h2>
-			<img src="Plantillas/indexhtml/img/logo.png.gif" alt="Logo Google">
+			<img class="imgCenter"src="Plantillas/indexhtml/img/logo.png.gif" alt="Logo Google">
 			<br>
 			<h4>SuSubSubTitulo</h4>
 			<p> Con HTML&lt;5 Se usaba el DIV, con HTML5:</p>
-			<img src="Plantillas/indexhtml/img/img_sem_elements.gif" alt="Semantica" align="middle">
+			<img class="imgCenter" src="Plantillas/indexhtml/img/img_sem_elements.gif" alt="nombreImagen">
 		</div>
 	</article>
 
@@ -120,16 +124,19 @@
 				<p> Paletas de colores:</p>
 				<a href="colorhunt.co" target="_blank">colorhunt.co</a>
 				<p> Fuentes:</p>
-				<a href="https://developer.mozilla.org/es/docs/Web/Reference" target="_blank">
-				https://developer.mozilla.org/es/docs/Web/Reference</a>
+				<a href="https://developer.mozilla.org/es/docs" target="_blank">
+				moz://a MDN web docs</a>
 				<br>
-				<a href="http://www.w3schools.com/html/html_elements.asp" target="_blank">
-				http://www.w3schools.com/html/html_elements.asp</a>
+				<a href="http://www.w3schools.com" target="_blank">
+				w3schools.com</a>
 				<br>
-				<a href="https://desarrolloweb.com/articulos/documentos-html-optimizados-moviles.html" target="_blank">https://desarrolloweb.com/articulos/documentos-html-optimizados-moviles.html</a>
+				<a href="https://desarrolloweb.com/articulos/documentos-html-optimizados-moviles.html" target="_blank">desarrolloweb.com</a><p>Documentos HTML optimizados para móviles</p>
 				<br>
 				<a href="https://franciscoamk.com/unidades-de-medida-en-css/" target="_blank">
-				https://franciscoamk.com/unidades-de-medida-en-css/</a>
+				https://franciscoamk.com/unidades-de-medida-en-css/</a><p>Unidades de medida en CSS</p>
+				<br>
+				<a href="http://programalotu.blogspot.com/2012/03/redimensionar-iframe-con-javascript.html" target="_blank">
+				ProgramaloTu</a><p>Redimensionar Iframe con Javascript</p>
 				<br>
 				<p>&nbsp;&nbsp; Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
 
@@ -140,11 +147,11 @@
 	<!-- FOOTER -->
 
 	<footer>
-		<p></br>
-			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
+		<p><br />
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 <br /><br />
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-			</a></br>
+				<img  class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a><br />
 			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 		</p>
 	</footer>

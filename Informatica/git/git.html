@@ -9,13 +9,20 @@
 	<TITLE>c2mismo GIT</TITLE>
 	<!-- Estilo CSS personal -->
 	<link href="../HTML/Plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="../HTML/Plantillas/indexhtml/css/navBar.css" rel="stylesheet" type="text/css">
 	<link href="../HTML/Plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
 	<link href="../HTML/Plantillas/indexhtml/css/media600.css" rel="stylesheet" type="text/css">
 	<link href="../HTML/Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="text/css">
+	<link href="../HTML/Plantillas/indexhtml/css/toggleHideDivShadow.css" rel="stylesheet" type="text/css">
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
+	<!-- Scripts -->
+	<script src="../HTML/Plantillas/indexhtml/js/toggleHideDivShadow.js"></script>
+
+	<!-- highlightjs -->
 	<link rel="stylesheet" href="../HTML/Plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
 	<script src="../HTML/Plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
@@ -24,20 +31,104 @@
 </HEAD>
 
 <BODY>
-	<header>
-		<div class=flexHeader>
-			<h1>c2mismo - Manuales diversos</h1>
-			<button class="boton" onclick="navShow()">
-				<img src="../HTML/Plantillas/indexhtml/img/menu1.svg" alt="Menu">
-			</button>
+
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr;  &barwed;-->
+	<button onclick="topFunction()" id="initBtn" title="Go to top" style="font-family:arial; font-size: 200%;">&bigtriangleup;</button>
+
+	<!-- navBar -->
+
+	<div class="contNavBar">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+  		<div class="contH1"><h1 class="h1Center";>GIT</h1></div>
+  		<div class="contLaterales">
+  		  <button id="openNavBtn" class="menuBtn" onclick="openNav()">
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+    		</button>
+  		</div>
+  	</div>
+  </div>
+  </div>
+
+
+
+	<!-- menu Navigation -->
+		<!-- Close Boton -->
+		<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav">
+		<button id="closeNavBtn" class="closeMenuBtn hidden" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="../HTML/Plantillas/indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
 		</div>
-	</header>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#ssh">Configuracion SSH</a></li>
+							<li><a href="#sistema">Configuracion del sistema</a></li>
+						</ol>
+					</li>
+					<li><a href="#actual">Actual area de trabajo</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+							<li><a href="#add">Añadir cambios</a></li>
+							<li><a href="#mv">Mover archivo</a></li>
+							<li><a href="#rm">Eliminar archivo</a></li>
+							<li><a href="#resetHead">Reset HEAD</a></li>
+						</ol>
+					</li>
+					<li><a href="#historial">Historial de trabajo</a>
+						<ol>
+							<li><a href="#commit">Commits</a></li>
+							<li><a href="#diff">Diff</a></li>
+						</ol>
+					</li>
+					<li><a href="#otros">Otros</a>
+						<ol>
+							<li><a href="#remote">Remote</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
 
 	<!-- DOCUMENT TITTLE -->
 
 	<section>
-		<div>
-			<h1>Manual GIT</h1>
+	</section>
+	<!-- DOCUMENT -->
+
+	<article>
+		<div id="inicio" class="initMarco">
 			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
 			mas bien una guía rápida y escueta.</p>
 			<p><strong>INDICE</strong></p>
@@ -73,34 +164,31 @@
 				</ol>
 			</div>
 		</div>
-	</section>
-	<!-- DOCUMENT -->
 
-	<article>
-		<div class="marco">
-			<H2 id=configuracion>Configuración</H2>
-			<p>&nbsp;Podemos ver la lista de configuraciones:</p>
+		<div id=configuracion class="marco">
+			<H2>Configuración</H2>
+			<p>Podemos ver la lista de configuraciones:</p>
 			<pre><code class="bash">git config --list</code></pre>
 
 			<h3 id="usuales">Configuraciones mas usuales</h3>
 
-			<p>&nbsp;Guardamos credenciales:</p>
+			<p>Guardamos credenciales:</p>
 			<pre><code class="bash">git config --global user.name "NOMBRE"
 git config --global user.email "<NOMBRE@EMAIL.com>"
 git config --global core.editor nano
 git config --global credential.helper cache	# Guarda tus credenciales del servidor varios minutos</code></pre>
 
-			<p>&nbsp;Rerere, la funcionalidad del "git rerere" es una característica oculta. El nombre se refiere a "reuse recorded resolution" y, como el nombre lo insinúa, te permite pedirle a Git que recuerde cómo resolviste un conflicto de hunk. Así la próxima vez que vea el mismo conflicto, Git puede resolverlo automáticamente por ti.:</p>
+			<p>Rerere, la funcionalidad del "git rerere" es una característica oculta. El nombre se refiere a "reuse recorded resolution" y, como el nombre lo insinúa, te permite pedirle a Git que recuerde cómo resolviste un conflicto de hunk. Así la próxima vez que vea el mismo conflicto, Git puede resolverlo automáticamente por ti.:</p>
 			<pre><code class="bash">git config --global rerere.enabled true</code></pre>
 			<p class="nota">Por ahora no lo uso, tengo varias dudas. <a href="https://www.git-scm.com/book/es/v2/Herramientas-de-Git-Rerere" target="_blank">7.9 Herramientas de Git - Rerere</a></p>
 
-			<p>&nbsp;Alias, yo no los uso, prefiero usar el aliases.rc del sistema, pero dejo aquí unos ejemplos:</p>
+			<p>Alias, yo no los uso, prefiero usar el aliases.rc del sistema, pero dejo aquí unos ejemplos:</p>
 			<pre><code class="bash">git config --global alias.co checkout	# crea un alias de checkout "co"
 git config --global alias.unstage 'reset HEAD --'	# alias de un comando completo
 git config --global alias.gk '!gitk'	# para un alias de un comando externo anteponer !
 git config --global alias.graf 'log --oneline --decorate --graph --all'</code></pre>
 
-			<p id="ssh">&nbsp;Clave SSH, para comunicarse con el servidor de gitHub de forma automática y mas segura, </br>
+			<p id="ssh">Clave SSH, para comunicarse con el servidor de gitHub de forma automática y mas segura, </br>
 			primero configuramos el ssh del sistema y creamos una clave privada y pública,
 			la clave pública la ingresamos en gitHub y la prvada la guardamos encriptada,
 			segundo, añadimos nuestra clave privada al sistema, para no teernos que logear
@@ -113,7 +201,7 @@ ssh-add ~/.ssh/id_rsa</code></pre>
 
 			<h3 id="sistema">Configuraciones del sistema</h3>
 
-			<p>&nbsp;Descargamos los repositorios:</p>
+			<p>Descargamos los repositorios:</p>
 			<pre><code class="bash">cd ~/proyectos
 git clone git@github.com:c2mismo/documentos.git
 git clone git@github.com:c2mismo/info.git
@@ -196,7 +284,7 @@ alias st='~/.gitstatus.sh'</code></pre>
 			<h2>Areas de trabajo (Repositorios)</h2>
 
 			<h3>Creamos en local y lo subimos a remoto</h3>
-			<p>&nbsp;Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
+			<p>Creamos una carpeta nueva y una vez dentro ejecutamos init, creará un archivo .git que no debe nunca ser modificado o eliminado.
 			Por último subimos el repositorio.</p>
 			<pre><code class="bash">mkdir nuevo-proyecto
 cd nuevo-proyecto
@@ -206,10 +294,11 @@ git remote</code></pre>
 
 
 			<h3>Creamos en remoto y lo descargamos en local</h3>
-			<p>&nbsp;Es el metodo que prefiero. </br>
-			Creamos un repositorio nuevo en GitHub y lo clonamos en nuestro sitema (local).</p>
+			<p>Es el metodo que prefiero. </p>
+			<p>
+				Creamos un repositorio nuevo en GitHub y lo clonamos en nuestro sitema (local).</p>
 			<pre><code class="bash">git clone HTTP://etc nombreDir</code></pre>
-			<p>&nbsp;Podemos nombrar el remoto con el alias que queramos (origin por defc.).</p>
+			<p>Podemos nombrar el remoto con el alias que queramos (origin por defc.).</p>
 			<pre><code class="bash">git clone -o aliasRemoto dirRemoto</code></pre>
 
 			<h3>Cambiamos el nombre a un repositorio</h3>
@@ -218,11 +307,11 @@ git remote</code></pre>
 			<h3>Eliminamos un repositorio</h3>
 			<pre><code class="bash">git remote remove aliasRemoto</code></pre>
 
-			<div class="adver">
-				<strong>Advertencia:</strong>
-				<div>
+			<div class="adverContainer">
+				<div class="adver"><strong>Advertencia:</strong></div>
+				<div class="adverText">
 					<p>Cada vez que se cree o se elimine un repositorio debemos actualizar los archivos de configuración del
-					<a href="#sistema" class="aDark">sistema</a>.<p/>
+					<a href="#sistema" class="aDark">sistema</a>.</p>
 				</div>
 			</div>
 		</div>
@@ -231,17 +320,17 @@ git remote</code></pre>
 		<div class="marco">
 			<h2 id="actual">Actual area de trabajo</h2>
 			<h3 id="status">Ver cambios</h3>
-			<p>&nbsp;Para ver una lista de los cambios realizados.</p>
+			<p>Para ver una lista de los cambios realizados.</p>
 			<pre><code class="bash">git status
 # opciones
 -s	(--short) genera una lista corta donde
 		M son modificados - A son añadidos - ?? no añadidos</code></pre>
 			<h3 id="add">Añadir cambios</h3>
-			<p>&nbsp;Añadir al staged uno o varios archivos modificados.</p>
+			<p>Añadir al staged uno o varios archivos modificados.</p>
 			<pre><code class="bash">git add nombreArchivo
 git add . # Los añades todos</code></pre>
 			<h3 id="mv">Mover archivo</h3>
-			<p>&nbsp;Mover o renombrar directorios y archivos.</p>
+			<p>Mover o renombrar directorios y archivos.</p>
 			<pre><code class="bash">git mv -v nombreArDir Destino
 # opciones
 -v	Vervose
@@ -249,12 +338,12 @@ git add . # Los añades todos</code></pre>
 -k	Omitir mover o renombrar acciones que podrían conducir a una condición de error. Se produce un error cuando Git no existe ni controla una fuente, o cuando sobrescribe un archivo existente a menos que se indique -f.
 -n	Hacer nada; solo muestra lo que pasaria</code></pre>
 			<h3 id="rm">Eliminar archivo</h3>
-			<p>&nbsp;Eliminar directorios y archivos.</p>
+			<p>Eliminar directorios y archivos.</p>
 			<pre><code class="bash">git rm nombreArDir Destino
 git rm log/\*.log	# Simbolo de escape (\) necesario para utilizar la propia expansión de git
 git rm --cached nombreArchivo # Si se ha añadido alago y queremos que deje de ser seguido por git o se nos ha olvidado incluirlo en el .gitignore</code></pre>
 			<h3 id="resetHead">Reset HEAD</h3>
-			<p>&nbsp;Antes de hacer un add te restaura el archivo al ultimo commit.</p>
+			<p>Antes de hacer un add te restaura el archivo al ultimo commit.</p>
 			<pre><code class="bash">git reset HEAD nombreArchivo</code></pre>
 		</div>
 
@@ -284,7 +373,7 @@ nomArc				Comitea el archivo concreto antes de commitearlo todo
 				</div>
 			</div>
 			<h3 id="diff">Diff</h3>
-			<p>&nbsp;Muestra los cambios antes de incluirlo en el staged.</p>
+			<p>Muestra los cambios ante10 de incluirlo en el staged.</p>
 			<pre><code class="bash">git diff
 # opciones
 --staged
@@ -319,12 +408,12 @@ remote remove aliasRemoto	# elimina el remoto completo: ramas, archivos y ajuste
 	<details>
 		<summary>Fuentes, créditos y enlaces de interés</summary>
 			<div>
-				<p>&nbsp; Fuentes:</p>
+				<p> Fuentes:</p>
 				<a href="https://www.git-scm.com" target="_blank">
 				GIT</a></br>
 				<a href="https://www.git-scm.com/book/es/v2" target="_blank">
 				GIT Libro completo en castellano</a></br>
-				<p>&nbsp;&nbsp; Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
+				<p> Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
 			</div>
 	</details>
 
@@ -334,7 +423,7 @@ remote remove aliasRemoto	# elimina el remoto completo: ramas, archivos y ajuste
 		<p></br>
 			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
 			</a></br>
 			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 		</p>
@@ -342,6 +431,56 @@ remote remove aliasRemoto	# elimina el remoto completo: ramas, archivos y ajuste
 
 </BODY>
 
+
+
+<script>
+	//Get the button to top
+	var initBtn = document.getElementById("initBtn");
+	//Hide c2mismo
+	var c2m = document.getElementById("c2m");
+	//Hide menuBtn
+	var openNavBtn = document.getElementById("openNavBtn");
+
+	var mQ600 = window.matchMedia("(max-width: 600px)")
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+
+	function scrollFunction() {
+		if (mQ600.matches){
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				initBtn.style.display = "block";
+				c2m.style.display = "none";
+				openNavBtn.style.display = "none";
+			} else {
+				initBtn.style.display = "none";
+				c2m.style.display = "inline-block";
+				openNavBtn.style.display = "inline-block";
+			}
+
+		} else {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				initBtn.style.display = "block";
+				c2m.style.display = "none";
+			} else {
+				initBtn.style.display = "none";
+				c2m.style.display = "block";
+			}
+		}
+	}
+
+
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+
+
+
+	</script>
 </HTML>
 
 
