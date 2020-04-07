@@ -2,7 +2,7 @@
  *
  * paletas colorhunt.co  https://colorhunt.co/palette/171392
  * https://developer.mozilla.org/es/docs/Web/Reference
- * https://www.w3schools.com/ monospace
+ * https://www.w3schools.com/
  *
  * Colors:
  * body #002b36 section #27496d H1 #7dbbb9 H2 #00a8cc nota #437A16 borfer #0c7b93 #c5d7d9 #2a5d68
@@ -10,6 +10,9 @@
 */
 * {
   box-sizing: border-box;
+}
+.printOn {
+	display: none;
 }
 body {
 	font-family: 'Ubuntu', sans-serif;
@@ -113,10 +116,6 @@ article p::first-letter {
 	font-size:  1.25rem;
 }
 
-
-
-
-
 .nota {
 	color: #437A16;
 	margin-left: 3rem;
@@ -181,15 +180,6 @@ footer {
 
 .hidden {
   display: none;
-  transition: width 0.5s;
-}
-
-.titlePrint {
-  font-size: 4rem;
-}
-.titlePrint p::first-letter {
-	font-family: 'Ubuntu', sans-serif;
-  font-size: 100%;
 }
 
 

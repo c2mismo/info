@@ -14,10 +14,11 @@
 	<link href="../html/plantillas/indexhtml/css/header.css" rel="stylesheet" type="text/css">
 	<link href="../html/plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
 	<link href="../html/plantillas/indexhtml/css/animated.css" rel="stylesheet" type="text/css">
-	<link href="../html/plantillas/indexhtml/css/media-print.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
 
 	<!-- CSS personal -->
-	<link rel="stylesheet" href="../html/plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
+	<link rel="stylesheet" href="../html/plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css" type="text/css">
+	<link rel="stylesheet" href="../html/plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-print.css" type="text/css" media="print">
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
 <BODY>
 
 	<!-- initButton - Botton Top Up -->
-	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr;  &barwed;-->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
 	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">&bigtriangleup;</button>
 
 	<!-- navBar -->
@@ -118,12 +119,12 @@
 
 	<article>
 		<div id="inicio" class="initMarco">
-			<div class="hidden printOn">
+			<div class="printOn titlePrint">
 				<p>GIT</p>
 			</div>
 			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
 			mas bien una guía rápida y escueta.</p>
-			<div class="hidden printOn">
+			<div class="printOn">
 				<p><strong>INDICE</strong></p>
 				<div class="center">
 					<ol>
@@ -362,7 +363,7 @@ nomArc				Comitea el archivo concreto antes de commitearlo todo
 			<div class="adver">
 				<strong>Advertencia:</strong>
 				<div>
-					<p>Antes de commitear un cambio del staged debes asegurate que no queden espacios en blanco huerfanos.<p/>
+					<p>Antes de commitear un cambio del staged debes asegurate que no queden espacios en blanco huerfanos.</p>
 					<pre><code class="bash">diff --check</code></pre>
 				</div>
 			</div>
@@ -431,14 +432,6 @@ remote remove aliasRemoto	# elimina el remoto completo: ramas, archivos y ajuste
 	<!-- highlightjs -->
 	<script src="../html/plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js" type="text/javascript"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
-
-	<script>
-
-		
-
-
-
-		</script>
 
 </BODY>
 </HTML>
