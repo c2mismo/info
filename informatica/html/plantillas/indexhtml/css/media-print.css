@@ -1,0 +1,14 @@
+/* para dispositivo con menos de 600px */
+@media print {
+	/* Pages have their own margins. */
+	html {
+		margin: 0;
+	}
+	/* Serif for print. */
+	body {
+		font-family: serif;
+	}
+}
+@page {
+	margin: 1.5cm 1.1cm;
+}

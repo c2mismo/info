@@ -1,9 +1,10 @@
 	// openNav
   function openNav() {
     document.getElementById("menuNav").style.width = "750px";
-    setTimeout(() => {
+    document.getElementById('closeNavBtn').classList.remove('hidden');
+    /* setTimeout(() => {
       document.getElementById('closeNavBtn').classList.remove('hidden');
-    }, 2400);
+    }, 2400); */
   }
 
   function closeNav() {

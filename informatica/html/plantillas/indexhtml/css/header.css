@@ -33,6 +33,7 @@
   text-align: center;
 }
 .navBar .h1Center {
+  font-size: 2rem;
 	color: #7dbbb9;
 	font-size: 1.875rem;
 	padding: 0.8rem;
@@ -75,7 +76,10 @@
   .navBar .contLaterales {
     width: auto;
   }
+
+
   .navBar .menuBtn {
     margin-right: 0rem;
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
   }
+}

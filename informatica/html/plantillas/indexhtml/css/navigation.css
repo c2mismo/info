@@ -10,7 +10,7 @@ body {
   z-index: 90;
   top: 0;
   right: 0;
-  background-color: #002b36;
+  background-color: #002b36c9;
   overflow-x: hidden;
   transition: 2.5s;
   padding-top: 32px;
@@ -18,40 +18,39 @@ body {
 #menuNav .menuNavBtn {
   display: block;
   float: right;
-  width: 70%;
+  width: 60%;
   margin-bottom: 1px;
   padding: 8px 8px 8px 5%;
   text-decoration: none;
   font-size: 25px;
   text-align: left;
-  color: #818181;
+  color: #042129;
   background-color: #084757;
-  border: 1rem, solid;
+  border: 0.05rem solid #16a5c9;
   transition: 0.3s;
 	cursor: pointer;
 }
 #menuNav .menuNavBtn2 {
   display: block;
   float: right;
-  width: 80%;
+  width: 70%;
   margin-bottom: 1px;
   padding: 8px 8px 8px 15%;
   text-decoration: none;
   font-size: 25px;
   text-align: left;
-  color: #f1f1f1;
+  color: #16a5c9;
   background-color: #084757;
-  border: 1rem, solid,;
+  border: 0.05rem solid #16a5c9;
   transition: 0.3s;
 	cursor: pointer;
 }
-#menuNav .contDivMenu {
-  display: block;
-  float: right;
-  z-index: 90;
-  width: 100%;
-  height: auto;
+#menuNav .menuNavBtn:hover {
+  color: #97e8ff;
+}#menuNav .menuNavBtn2:hover {
+  color: #97e8ff;
 }
+
 #menuNav .contSplitMenuNav {
   display: block;
   width: 90%;
@@ -69,29 +68,43 @@ body {
   box-shadow: 0px 0px 9px #7dbbb9;
   transition: 0.3s;
 }
-#menuNav .menuNavBtn:hover {
-  color: #f1f1f1;
+#menuNav .contDivMenu {
+  display: block;
+  float: right;
+  z-index: 90;
+  width: 100%;
+  height: auto;
 }
 
+#menuNav .indiceDeco {
+  width: 92%;
+  margin: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  height: 900px;
+  border: 0;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+}
+#menuNav iframe {
+  width: 92%;
+  margin: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  height: 900px;
+  border: 0;
+	border-radius: 0.625rem;
+  box-shadow: 0px 0px 9px #7dbbb9;
+}
 
 #menuNav .center {
 	position: relative;
   display: inline-block;
 }
-
 #menuNav ol, li {
   text-align: left;
 	color: #00a8cc;
 }
-
-
-
-
-#menuNav .hidden {
-  display: none;
-}
-
-
 
 #menuNav .closeMenuBtn {
   z-index: 91;
@@ -113,7 +126,6 @@ body {
 	border-radius: 0.625rem;
   box-shadow: 0px 0px 9px #7dbbb9;
 	cursor: pointer;
-  transition: 0.5s;
 }
 #menuNav .closeMenuBtn:hover {
 	background: #84aedb33;
@@ -124,25 +136,31 @@ body {
 	border: 0rem;
 }
 
-
-
-#menuNav .indiceDeco {
-  width: 92%;
-  margin: 2rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  height: 900px;
-  border: 0;
-	border-radius: 0.625rem;
-  box-shadow: 0px 0px 9px #7dbbb9;
+@media (max-width: 600px) {
+  #menuNav .indiceDeco {
+    margin: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0rem;;
+  }
+  #menuNav iframe {
+    margin: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0rem;;
+  }
+  #menuNav .closeMenuBtn {
+    z-index: 91;
+    position: fixed;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 19rem;
+  }
 }
-#menuNav iframe {
-  width: 92%;
-  margin: 2rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  height: 900px;
-  border: 0;
-	border-radius: 0.625rem;
-  box-shadow: 0px 0px 9px #7dbbb9;
+/* Ver width de menuNav */
+/* en toggleHideDivShadow.js */
+@media (max-width: 750px) {
+  #menuNav .closeMenuBtn {
+    left: 0rem;
+  }
 }

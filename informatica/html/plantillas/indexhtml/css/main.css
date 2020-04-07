@@ -34,7 +34,7 @@ body {
   width: 3.125rem;
   height: 3.125rem;
 	color: #00a8cc;
-  font-size: 1.125rem;
+	font-size: 1.5rem;
 	text-align: center;
   padding-bottom: 0.5rem;
 	background: #4588cf33;
@@ -67,16 +67,16 @@ article p::first-letter {
 	margin: 0 auto;
 	border-style: solid;
 	border-color: #0c7b93;
-  border-radius: 1.25rem 1.25rem 0.4rem  0.4rem;
+  border-radius: 1.25rem 1.25rem 0.3rem 0.3rem;
 }
 
-.initMarco .center {
+#inicio .center {
 	position: relative;
   display: inline-block;
 }
-
-.initMarco ol, li {
-	text-align: left;
+#inicio ol, li {
+  text-align: left;
+	color: #00a8cc;
 }
 
 .marco {
@@ -87,6 +87,7 @@ article p::first-letter {
 	border-color: #0c7b93;
 	padding: 1.25rem;
 	margin: 1.25rem auto;
+  border-radius: 0.3rem;
 }
 .marco p {
 	padding: 1.875rem 0 0 0;
@@ -118,8 +119,8 @@ article p::first-letter {
 
 .nota {
 	color: #437A16;
-	margin: 0;
-	padding: 0 1.875rem;
+	margin-left: 3rem;
+	padding: 0;
 }
 
 
@@ -176,4 +177,33 @@ footer {
 	text-align: center;
 	position: relative;
 	color: #7dbbb9;
+}
+
+.hidden {
+  display: none;
+  transition: width 0.5s;
+}
+
+.titlePrint {
+  font-size: 4rem;
+}
+.titlePrint p::first-letter {
+	font-family: 'Ubuntu', sans-serif;
+  font-size: 100%;
+}
+
+
+@media (max-width: 600px) {
+	body {
+		padding-top: 15rem;
+	}
+}
+@media only screen and (orientation: portrait) {
+	.marco, .initMarco {
+		width: 100%;
+		margin: 0.50rem auto;
+	}
+	details {
+		width: 100%;
+	}
 }
