@@ -15,7 +15,7 @@
 }
 
 .contTree li::before {
-  border-top: 2px solid rgba(0, 128, 0, 0.801);
+  border-top: 2px solid #008000cc;
   box-shadow: 0px 0px 9px #7dbbb9;
   top: 9px;
   width: 8px;
@@ -42,6 +42,25 @@
   cursor: pointer;
 }
 
+
 .colorDir {
+  color: #00a8cc;
+}
+
+.colorDir a {
+  text-decoration: none;
+}
+
+.colorDir > a {
+	color: #00a8cc;
+}
+
+.colorDir > a:hover {
+  color: #bff3ff;
+  background: #ffffff00;
+  text-shadow: 0px 0px 7px #7dbbb9;
+}
+
+.colorDir > a:link, .colorDir > a:visited {
   color: #00a8cc;
 }

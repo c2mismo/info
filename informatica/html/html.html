@@ -8,48 +8,151 @@
 
 	<TITLE>c2mismo HTML</TITLE>
 	<!-- Estilo CSS personal -->
-	<link href="Plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
-	<link href="Plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
-	<link href="Plantillas/indexhtml/css/media600.css" rel="stylesheet" type="text/css">
-	<link href="Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/header.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
+
+	<!-- CSS CodeBox_highlightjs -->
+	<link rel="stylesheet" href="plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css" type="text/css">
+	<link rel="stylesheet" href="plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-print.css" type="text/css" media="print">
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="Plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css">
-	<script src="Plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-
 
 </HEAD>
 
 <BODY>
-	<header>
-		<div class=flexHeader>
-			<p class=flexHeaderH1>c2mismo - Manuales diversos</p>
-			<button class="boton" onclick="navShow()">
-				<img src="../HTML/Plantillas/indexhtml/img/menu1.svg" alt="Menu">
-			</button>
-		</div>
-	</header>
 
-	<!-- DOCUMENT TITTLE -->
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">
+		&bigtriangleup;
+	</button>
 
-	<section>
-		<div>
-			<h1>Manual HTML</h1>
-			<div>
-				<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
-				mas bien una guía rápida y escueta.</p>
+	<!-- navBar -->
+
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+			<div class="contH1"><h1 class="h1Center">HTML</h1></div>
+			<div class="contLaterales">
+				<button id="openNavBtn" class="menuBtn" onclick="openNav()">
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+				</button>
 			</div>
 		</div>
-	</section>
+  </div>
+
+
+
+	<!-- menu Navigation -->
+		<!-- Close Boton -->
+		<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="plantillas/indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
+		</div>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#ssh">Configuracion SSH</a></li>
+							<li><a href="#sistema">Configuracion del sistema</a></li>
+						</ol>
+					</li>
+					<li><a href="#actual">Actual area de trabajo</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+							<li><a href="#add">Añadir cambios</a></li>
+							<li><a href="#mv">Mover archivo</a></li>
+							<li><a href="#rm">Eliminar archivo</a></li>
+							<li><a href="#resetHead">Reset HEAD</a></li>
+						</ol>
+					</li>
+					<li><a href="#historial">Historial de trabajo</a>
+						<ol>
+							<li><a href="#commit">Commits</a></li>
+							<li><a href="#diff">Diff</a></li>
+						</ol>
+					</li>
+					<li><a href="#otros">Otros</a>
+						<ol>
+							<li><a href="#remote">Remote</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div> <!-- nav -->
 
 	<!-- DOCUMENT -->
 
 	<article>
-		<div class="marco">
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>HTML</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+			<div class="printOn"><!--onlyPrint-->
+				<p><strong>INDICE</strong></p>
+				<div class="center">
+					<ol>
+						<li><a href="#configuracion">Configuracion</a>
+							<ol>
+								<li><a href="#usuales">Configuraciones usuales</a></li>
+								<li><a href="#ssh">Configuracion SSH</a></li>
+								<li><a href="#sistema">Configuracion del sistema</a></li>
+							</ol>
+						</li>
+						<li><a href="#actual">Actual area de trabajo</a>
+							<ol>
+								<li><a href="#status">Ver cambios</a></li>
+								<li><a href="#add">Añadir cambios</a></li>
+								<li><a href="#mv">Mover archivo</a></li>
+								<li><a href="#rm">Eliminar archivo</a></li>
+								<li><a href="#resetHead">Reset HEAD</a></li>
+							</ol>
+						</li>
+						<li><a href="#historial">Historial de trabajo</a>
+							<ol>
+								<li><a href="#commit">Commits</a></li>
+								<li><a href="#diff">Diff</a></li>
+							</ol>
+						</li>
+						<li><a href="#otros">Otros</a>
+							<ol>
+								<li><a href="#remote">Remote</a></li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
 			<h2>subtitulo H2</h2><br />
 			<p>Es parrafo <b>negrita</b>, <i>italica</i>.</p>
 
@@ -106,7 +209,9 @@
 			<a href="https://www.floraqueen.es/ramos-de-flores" target="_blank">Otro enlace</a>
 			<br>
 		</div>
-			<div class="marco">
+
+
+		<div id=configuracion class="marco">
 			<h2>Imagenes</h2>
 			<img class="imgCenter"src="Plantillas/indexhtml/img/logo.png.gif" alt="Logo Google">
 			<br>
@@ -147,14 +252,23 @@
 	<!-- FOOTER -->
 
 	<footer>
-		<p><br />
-			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 <br /><br />
+		<p></br>
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-				<img  class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-			</a><br />
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a></br>
 			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 		</p>
 	</footer>
+
+
+	<!-- Scripts -->
+	<script src="plantillas/indexhtml/js/navigation.js" type="text/javascript"></script>
+	<script src="plantillas/indexhtml/js/scroll.js" type="text/javascript"></script>
+
+	<!-- highlightjs -->
+	<script src="plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js" type="text/javascript"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 
 </BODY>

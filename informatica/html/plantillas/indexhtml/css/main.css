@@ -147,6 +147,14 @@ article p::first-letter {
   height: auto;
 }
 
+.youtube-limit {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	max-width: 800px;
+  height: auto;
+}
+
 .youtube-container {
 	position: relative;
 	padding-bottom: 56.25%;

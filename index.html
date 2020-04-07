@@ -4,100 +4,86 @@
 
 <HEAD>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<TITLE>c2mismo - index</TITLE>
-	<!-- Estilo CSS personal -->
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/anclasRed.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/media600.css" rel="stylesheet" type="text/css">
-	<link href="Informatica/HTML/Plantillas/indexhtml/css/media_portrait.css" rel="stylesheet" type="text/css">
+
+	<!--CSS personal -->
+	<link href="indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/header.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
-	<script src="Informatica/HTML/Plantillas/indexhtml/js/nav.js"></script>
-
-	<script type="text/javascript">
-
-		function sizeFrame() {
-			var F = document.getElementById("mainframe");
-			if(F.contentDocument) {
-			F.height = F.contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
-			} else {
-			F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
-			}
-		}
-
-		window.onload=sizeFrame;
-
-		function autoIframe(mainframe){
-			try{
-				frame = document.getElementById(mainframe);
-				innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
-				if (innerDoc == null){
-											// Google Chrome
-					frame.height = document.all[mainframe].clientHeight + document.all[mainframe].offsetHeight + document.all[mainframe].offsetTop;
-				}
-				else{
-				objToResize = (frame.style) ? frame.style : frame;
-				objToResize.height = innerDoc.body.scrollHeight + 18;	//  + "px"
-				}
-			}
-			catch(err){
-							alert('Err: ' + err.message);
-					window.status = err.message;
-			}
-		}
-		</script>
-
 </HEAD>
 
 <BODY>
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">&bigtriangleup;</button>
 
+	<!-- navBar -->
 
-	<!-- navbar -->
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+  		<div class="contH1"><h1 class="h1Center">Manuales</h1></div>
+  		<div class="contLaterales">
+  		  <button id="openNavBtn" class="menuBtn" onclick="openNav()">
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+    		</button>
+  		</div>
+  	</div>
+  </div>
+  </div>
 
-	<div class="navbar">
-		<a href="#home">Home</a>
-		<a href="#news">News</a>
-		<a href="#contact">Contact</a>
-	</div>
+<!-- menu Navigation -->
+	<!-- Close Boton -->
+	<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
 
-	<!-- iframe superior con JS esta escrito arriba
-	<div class="iframe-container">
-		<iframe src="Informatica/HTML/Plantillas/indexhtml/nav.html" scrolling="no" framborder="0" width="100%" id="mainframe" name="frame" onload="if (window.parent && window.parent.autoIframe) {window.parent.autoIframe('mainframe');}">
-		Tu navegador no soporta iFrames. Prueba con FireFox</iframe>
-	</div> -->
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
+		</div>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+			</div>
+		</div>
+
+	</div> <!-- nav -->
 
 
 	<!-- DOCUMENT TITTLE -->
 
-	<section>
-		<div>
-			<h1>Manuales y documentos de c2mismo</h1>
-			<p>Estos manuales no pretenden ser una guía completa sobre el tema a tratar,
+	<!-- DOCUMENT -->
+	<article>
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>Manuales</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
 			mas bien una guía rápida y escueta.</p>
 		</div>
-	</section>
-
-
-
-	<!-- DOCUMENT
-
-	 <article>
-	</article> -->
-
-	<!-- DETAILS
-
-	<details>
-		<summary>Fuentes y enlaces de interés</summary>
-			<div>
-			</div>
-	</details> -->
 
 	<!-- FOOTER -->
 
@@ -111,9 +97,9 @@
 		</p>
 	</footer>
 
-
-
-
+	<!-- Scripts -->
+	<script src="indexhtml/js/navigation.js" type="text/javascript"></script>
+	<script src="indexhtml/js/scroll.js" type="text/javascript"></script>
 
 </BODY>
 

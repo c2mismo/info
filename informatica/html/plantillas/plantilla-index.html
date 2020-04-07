@@ -6,72 +6,100 @@
 	<meta charset="UTF-8">
 
 	<TITLE>c2mismo - index</TITLE>
-	<!-- Estilo CSS personal -->
+
+	<!--CSS personal -->
 	<link href="indexhtml/css/main.css" rel="stylesheet" type="text/css">
 	<link href="indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
-	<link href="indexhtml/css/anclasRed.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/header.css" rel="stylesheet" type="text/css">
 	<link href="indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
-	<link href="indexhtml/css/media600.css" rel="stylesheet" type="text/css">
-	<!-- Estilo fonts -->
+	<link href="indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
+
+	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-	<!-- Java-Script -->
-	<script src="Informatica/HTML/Plantillas/indexhtml/js/nav.js"></script>
-	
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
 </HEAD>
 
 <BODY>
-	<header>
-		<div class=flexHeader>
-			<h1>c2mismo - Manuales diversos</h1>
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">&bigtriangleup;</button>
+
+	<!-- navBar -->
+
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+  		<div class="contH1"><h1 class="h1Center">Manuales</h1></div>
+  		<div class="contLaterales">
+  		  <button id="openNavBtn" class="menuBtn" onclick="openNav()">
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+          <div class="lineBtn"></div>
+    		</button>
+  		</div>
+  	</div>
+  </div>
+  </div>
+
+<!-- menu Navigation -->
+	<!-- Close Boton -->
+	<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
 		</div>
-	</header>
-	<!-- BUTTONS -->
 
-	<nav>
-		<button class="navButton" onclick="navMenu()">
-		<strong>Menu</strong></button>
-		<button class="navBar hideLikeMovil" onclick="navMenuArduino()">Arduino</button>
-		<button class="navBar hideLikeMovil" onclick="navMenuElectronica()">Electronica</button>
-		<button class="navBar hideLikeMovil" onclick="navMenuInformatica()">Informatica</button>
-	</nav>
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+			</div>
+		</div>
 
-	<!-- MENU DIRECTORIES -->
+	</div> <!-- nav -->
 
-	<div id="menuArduino" class="menuDir hidden">
-		<p>Enlaces a manuales de Arduino</p>
-	</div>
-
-	<div id="menuElectronica" class="menuDir hidden">
-		<p>Enlaces a manuales de Electronica</p>
-	</div>
-
-	<div id="menuInformatica" class="menuDir hidden">
-		<p>Enlaces a manuales de Informatica</p>
-		<a class="aRed" href="Informatica/HTML/HTML.html">
-		Manual HTML</a><br>
-		<a class="aRed" href="Informatica/git/git.html">
-		Manual GIT</a><br>
-	</div>
 
 	<!-- DOCUMENT TITTLE -->
 
-	<section>
-		<div>
-			<h1>Manuales y documentos de c2mismo</h1>
-			<p>Estos manuales no pretenden ser una guía completa sobre el tema a tratar,
+	<!-- DOCUMENT -->
+	<article>
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>Manuales</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
 			mas bien una guía rápida y escueta.</p>
 		</div>
-	</section>
 
 	<!-- FOOTER -->
 
 	<footer>
-		<p>
-			( <a href="http://creativecommons.org/licenses/by/2.5/es/"><abbr title="Creative Commons">cc</abbr></a> ) 
-			c2mismo, 2020</p>
+		<p></br>
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a></br>
+			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+		</p>
 	</footer>
 
+	<!-- Scripts -->
+	<script src="indexhtml/js/navigation.js" type="text/javascript"></script>
+	<script src="indexhtml/js/scroll.js" type="text/javascript"></script>
 
 </BODY>
 
