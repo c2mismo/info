@@ -1,0 +1,47 @@
+/* Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+ * Edit by c2mismo
+*/
+
+.hljs { display: block; overflow-x: auto; padding: 0.5em; background: #002b36; color: #839496; border-left: 0.4375em solid #0c7b93; border-radius: 0.3125em; }
+/* 586e75 */
+.hljs-comment { color: #31cfff; }
+.hljs-quote { color: #6f5875; }
+/*  */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition { color: #97998c; }
+/*  */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp { color: #2aa198; }
+/*  */
+.hljs-title { color: #268bd2; }
+.hljs-section { color: #268bd2; }
+.hljs-name { color: #268bd2; }
+.hljs-selector-id { color: #268bd2; }
+.hljs-selector-class { color: #268bd2; }
+/*  */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type { color: #b58900; }
+/*  */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link { color: #cb4b16; }
+/*  */
+.hljs-built_in,
+.hljs-deletion { color: #dc322f; }
+.hljs-formula { background: #073642; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }

@@ -1,0 +1,108 @@
+
+html {
+	margin: 0;
+}
+body {
+	background: white;
+	padding-top: 0rem;
+}
+.printOff {
+	display: none;
+}
+.printOn {
+	display: block;
+}
+
+.titlePrint {
+	font-size: 4rem;
+}
+.titlePrint p::first-letter {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 100%;
+}
+
+.initMarco {
+	background: white;
+	color: black;
+	border-color: white;
+}
+.marco, .initMarco {
+	width: 100%;
+	margin: 0;
+}
+
+
+#inicio ol, li {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+a:link, a:visited {
+	color: black;
+}
+a:focus {
+	background: white;
+	color: black;
+}
+a:hover {
+	background: white;
+	color: black;
+}
+a:active {
+	background: white;
+	color: black;
+}
+
+.marco {
+	color: black;
+	background: white;
+	border-color: white;
+}
+
+.marco h2 {
+	color: black;
+}
+.marco h3 {
+	color: black;
+	border-color: black;
+}
+.marco h4 {
+	color: black;
+	font-size:  1.25rem;
+}
+
+.nota {
+	color: black;
+}
+
+.adverContainer {
+	color: black;
+	background: white;
+	border-left: 0.4375rem solid black;
+	border-right: 0.4375rem solid black;
+}
+.aDark:link, .aDark:visited {
+	text-decoration: none;
+	color: black;
+}
+
+details {
+	border-color: black;
+  background: white;
+	color: black;
+	width: 94%;
+}
+footer {
+	text-align: center;
+	position: relative;
+	color: black;
+}
+
+
+
+
+@page {
+	margin: 1.5cm 0cm;
+}

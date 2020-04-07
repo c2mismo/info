@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<HTML lang="es">
+
+<HEAD>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<TITLE>c2mismo HTML</TITLE>
+	<!-- Estilo CSS personal -->
+	<link href="plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/header.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="plantillas/indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
+
+	<!-- CSS CodeBox_highlightjs -->
+	<link rel="stylesheet" href="plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css" type="text/css">
+	<link rel="stylesheet" href="plantillas/indexhtml/js/CodeBox_highlightjs/css/solarized-print.css" type="text/css" media="print">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+
+
+</HEAD>
+
+<BODY>
+
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">
+		&bigtriangleup;
+	</button>
+
+	<!-- navBar -->
+
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+			<div class="contH1"><h1 class="h1Center">HTML</h1></div>
+			<div class="contLaterales">
+				<button id="openNavBtn" class="menuBtn" onclick="openNav()">
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+				</button>
+			</div>
+		</div>
+  </div>
+
+
+
+	<!-- menu Navigation -->
+		<!-- Close Boton -->
+		<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="plantillas/indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
+		</div>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#ssh">Configuracion SSH</a></li>
+							<li><a href="#sistema">Configuracion del sistema</a></li>
+						</ol>
+					</li>
+					<li><a href="#actual">Actual area de trabajo</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+							<li><a href="#add">Añadir cambios</a></li>
+							<li><a href="#mv">Mover archivo</a></li>
+							<li><a href="#rm">Eliminar archivo</a></li>
+							<li><a href="#resetHead">Reset HEAD</a></li>
+						</ol>
+					</li>
+					<li><a href="#historial">Historial de trabajo</a>
+						<ol>
+							<li><a href="#commit">Commits</a></li>
+							<li><a href="#diff">Diff</a></li>
+						</ol>
+					</li>
+					<li><a href="#otros">Otros</a>
+						<ol>
+							<li><a href="#remote">Remote</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div> <!-- nav -->
+
+	<!-- DOCUMENT -->
+
+	<article>
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>HTML</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+			<div class="printOn"><!--onlyPrint-->
+				<p><strong>INDICE</strong></p>
+				<div class="center">
+					<ol>
+						<li><a href="#configuracion">Configuracion</a>
+							<ol>
+								<li><a href="#usuales">Configuraciones usuales</a></li>
+								<li><a href="#ssh">Configuracion SSH</a></li>
+								<li><a href="#sistema">Configuracion del sistema</a></li>
+							</ol>
+						</li>
+						<li><a href="#actual">Actual area de trabajo</a>
+							<ol>
+								<li><a href="#status">Ver cambios</a></li>
+								<li><a href="#add">Añadir cambios</a></li>
+								<li><a href="#mv">Mover archivo</a></li>
+								<li><a href="#rm">Eliminar archivo</a></li>
+								<li><a href="#resetHead">Reset HEAD</a></li>
+							</ol>
+						</li>
+						<li><a href="#historial">Historial de trabajo</a>
+							<ol>
+								<li><a href="#commit">Commits</a></li>
+								<li><a href="#diff">Diff</a></li>
+							</ol>
+						</li>
+						<li><a href="#otros">Otros</a>
+							<ol>
+								<li><a href="#remote">Remote</a></li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<h2>subtitulo H2</h2><br />
+			<p>Es parrafo <b>negrita</b>, <i>italica</i>.</p>
+
+
+			<ul>
+				<li>tecnólogos</li>
+				<li>pensadores</li>
+				<li>constructores</li>
+			</ul>
+			<h3>SubSubTitulo H3</h4>
+			<ol>
+				<li>tecnólogos</li>
+				<li>pensadores</li>
+				<li>constructores</li>
+			</ol>
+			<h4>SuSubSubTitulo</h4>
+			<a href="#">Esto es un enlace "ancla"</a>
+
+			<div class=adver>
+				<strong>Advertencia:</strong>
+				<div>
+					<p>
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+					</p>
+				</div>
+			</div>
+
+			<pre><code>&lt;!DOCTYPE html&gt;</code></pre> — es codigo.
+
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;title&gt;Mi pagina de prueba&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;img src="indexhtml/img/firefox-icon.png" alt="Mi imagen de prueba"&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+			<p class=nota>
+			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+			Lorem ipsum dolor, sit amet consectetur adipsicing elit. NLorem ipsum dolor, sit amet consectetur adipsicing elit. N
+			</p><br /><br />
+
+
+			<a href="http://paginaspersonales.deusto.es/airibar/Ed_digital/Ed_digital.html">Apuntes claros y escuetos sobre HTML	&lt;5 y CSS</a>
+			<br>
+			<a href="http://www.w3schools.com/html/html_elements.asp" target="_blank">En inglés Bién esquematizado</a>
+			<br>
+			<a href="https://www.floraqueen.es/ramos-de-flores" target="_blank">Otro enlace</a>
+			<br>
+		</div>
+
+
+		<div id=configuracion class="marco">
+			<h2>Imagenes</h2>
+			<img class="imgCenter"src="Plantillas/indexhtml/img/logo.png.gif" alt="Logo Google">
+			<br>
+			<h4>SuSubSubTitulo</h4>
+			<p> Con HTML&lt;5 Se usaba el DIV, con HTML5:</p>
+			<img class="imgCenter" src="Plantillas/indexhtml/img/img_sem_elements.gif" alt="nombreImagen">
+		</div>
+	</article>
+
+	<!-- DETAILS -->
+
+	<details>
+		<summary>Fuentes y enlaces de interés</summary>
+			<div>
+				<p> Paletas de colores:</p>
+				<a href="colorhunt.co" target="_blank">colorhunt.co</a>
+				<p> Fuentes:</p>
+				<a href="https://developer.mozilla.org/es/docs" target="_blank">
+				moz://a MDN web docs</a>
+				<br>
+				<a href="http://www.w3schools.com" target="_blank">
+				w3schools.com</a>
+				<br>
+				<a href="https://desarrolloweb.com/articulos/documentos-html-optimizados-moviles.html" target="_blank">desarrolloweb.com</a><p>Documentos HTML optimizados para móviles</p>
+				<br>
+				<a href="https://franciscoamk.com/unidades-de-medida-en-css/" target="_blank">
+				https://franciscoamk.com/unidades-de-medida-en-css/</a><p>Unidades de medida en CSS</p>
+				<br>
+				<a href="http://programalotu.blogspot.com/2012/03/redimensionar-iframe-con-javascript.html" target="_blank">
+				ProgramaloTu</a><p>Redimensionar Iframe con Javascript</p>
+				<br>
+				<p>&nbsp;&nbsp; Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
+
+
+			</div>
+	</details>
+
+	<!-- FOOTER -->
+
+	<footer>
+		<p></br>
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a></br>
+			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+		</p>
+	</footer>
+
+
+	<!-- Scripts -->
+	<script src="plantillas/indexhtml/js/navigation.js" type="text/javascript"></script>
+	<script src="plantillas/indexhtml/js/scroll.js" type="text/javascript"></script>
+
+	<!-- highlightjs -->
+	<script src="plantillas/indexhtml/js/CodeBox_highlightjs/highlight.pack.js" type="text/javascript"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+</BODY>
+
+</HTML>
+
+
+
+

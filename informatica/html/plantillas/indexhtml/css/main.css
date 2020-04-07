@@ -1,0 +1,207 @@
+/* fuentes
+ *
+ * paletas colorhunt.co  https://colorhunt.co/palette/171392
+ * https://developer.mozilla.org/es/docs/Web/Reference
+ * https://www.w3schools.com/
+ *
+ * Colors:
+ * body #002b36 section #27496d H1 #7dbbb9 H2 #00a8cc nota #437A16 borfer #0c7b93 #c5d7d9 #2a5d68
+ * adver #550000	background #fff3d4	border #f6b73c
+*/
+* {
+  box-sizing: border-box;
+}
+.printOn {
+	display: none;
+}
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background: #002b36;
+	line-height: 1.6rem;
+	letter-spacing: 0.05rem;
+	padding: 0px;
+	padding-top: 7rem;
+	margin: 0px;
+}
+
+#initBtn {
+  z-index: 70;
+  display: none;
+  position: fixed;
+  outline: none;
+  bottom: 1.25rem;
+  right: 1.9rem;
+}
+
+#initBtn {
+  width: 3.125rem;
+  height: 3.125rem;
+	color: #00a8cc;
+	font-size: 1.5rem;
+	text-align: center;
+  padding-bottom: 0.5rem;
+	background: #4588cf33;
+	border: 0rem;
+	border-radius: 0.625rem;
+  box-shadow: 0 0 0.57rem #7dbbb9;
+	cursor: pointer;
+}
+#initBtn:hover {
+	background: #002b3633;
+	border: 0rem;
+}
+#initBtn:active {
+	background: #002b3633;
+	border: 0rem;
+}
+
+
+article p::first-letter {
+	font-family: 'Tangerine', cursive;
+  font-size: 200%;
+}
+
+.initMarco {
+	width: 98%;
+	text-align: center;
+	background: #27496d;
+	color: #00a8cc;
+	padding: 1.875rem 1.875rem;
+	margin: 0 auto;
+	border-style: solid;
+	border-color: #0c7b93;
+  border-radius: 1.25rem 1.25rem 0.3rem 0.3rem;
+}
+
+#inicio .center {
+	position: relative;
+  display: inline-block;
+}
+#inicio ol, li {
+  text-align: left;
+	color: #00a8cc;
+}
+
+.marco {
+	width: 98%;
+	color: #7dbbb9;
+	background: #27496d;
+	border-style: solid;
+	border-color: #0c7b93;
+	padding: 1.25rem;
+	margin: 1.25rem auto;
+  border-radius: 0.3rem;
+}
+.marco p {
+	padding: 1.875rem 0 0 0;
+	max-width: 60rem;
+	max-width: 800px;
+}
+.marco h2 {
+	color: #00a8cc;
+	font-size:  2.5rem;
+	line-height: 2.5rem;
+	padding: 0;
+}
+.marco h3 {
+	width: 80%;
+	color: #00a8cc;
+	font-size:  1.5625rem;
+	border-bottom: solid;
+	border-color: #0c7b93;
+	padding: 1.25rem 1.5625rem;
+}
+.marco h4 {
+	color: #00a8cc;
+	font-size:  1.25rem;
+}
+
+.nota {
+	color: #437A16;
+	margin-left: 3rem;
+	padding: 0;
+}
+
+
+.adverContainer {
+	color: #741529;
+	background: #00a8cc;
+	border-left: 0.4375rem solid #741529; /* 721b65 53149d 882367  */
+  border-radius: 1.25rem;
+	width: 90%;
+	margin: 3.125rem auto;
+	padding: 0.625rem 1.875rem;
+}
+.adverText {
+	padding: 0 0 0 3.125rem;
+}
+.aDark:link, .aDark:visited {
+	color: #4b2367;
+}
+
+.imgCenter {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	max-width: 100%;
+  height: auto;
+}
+
+.youtube-limit {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	max-width: 800px;
+  height: auto;
+}
+
+.youtube-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.youtube-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+details {
+	width: 98%;
+	border-style: solid;
+	border-color: #27496d;
+  background: #002b36;
+	color: #00a8cc;
+  padding: 0 0.625rem;
+  margin: 0 auto;
+}
+
+footer {
+	text-align: center;
+	position: relative;
+	color: #7dbbb9;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+	body {
+		padding-top: 15rem;
+	}
+}
+@media only screen and (orientation: portrait) {
+	.marco, .initMarco {
+		width: 100%;
+		margin: 0.50rem auto;
+	}
+	details {
+		width: 100%;
+	}
+}

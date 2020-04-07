@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<HTML lang="es">
+
+<HEAD>
+	<meta charset="UTF-8">
+
+	<TITLE>c2mismo TITULO</TITLE>
+	<!-- Estilo CSS personal -->
+	<link href="indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/header.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
+
+	<!-- Estilo CSS code-highlightjs con estilo Solarized y tres fondos -->
+	<link rel="stylesheet" href="indexhtml/js/CodeBox_highlightjs/css/solarized-dark.css" type="text/css">
+	<link rel="stylesheet" href="indexhtml/js/CodeBox_highlightjs/css/solarized-print.css" type="text/css" media="print">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+
+</HEAD>
+
+<BODY>
+
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">
+		&bigtriangleup;
+	</button>
+
+	<!-- navBar -->
+
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+			<div class="contH1"><h1 class="h1Center">TITULO</h1></div>
+			<div class="contLaterales">
+				<button id="openNavBtn" class="menuBtn" onclick="openNav()">
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+				</button>
+			</div>
+		</div>
+  </div>
+
+
+
+	<!-- menu Navigation -->
+		<!-- Close Boton -->
+		<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoDeco">
+				<iframe src="indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
+		</div>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden indiceDeco">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#ssh">Configuracion SSH</a></li>
+							<li><a href="#sistema">Configuracion del sistema</a></li>
+						</ol>
+					</li>
+					<li><a href="#actual">Actual area de trabajo</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+							<li><a href="#add">Añadir cambios</a></li>
+							<li><a href="#mv">Mover archivo</a></li>
+							<li><a href="#rm">Eliminar archivo</a></li>
+							<li><a href="#resetHead">Reset HEAD</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div> <!-- nav -->
+
+	<!-- DOCUMENT -->
+
+	<article>
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>TITULO</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+			<div class="printOn"><!--onlyPrint-->
+				<p><strong>INDICE</strong></p>
+				<div class="center">
+					<ol>
+						<li><a href="#configuracion">Configuracion</a>
+							<ol>
+								<li><a href="#usuales">Configuraciones usuales</a></li>
+								<li><a href="#ssh">Configuracion SSH</a></li>
+								<li><a href="#sistema">Configuracion del sistema</a></li>
+							</ol>
+						</li>
+						<li><a href="#actual">Actual area de trabajo</a>
+							<ol>
+								<li><a href="#status">Ver cambios</a></li>
+								<li><a href="#add">Añadir cambios</a></li>
+								<li><a href="#mv">Mover archivo</a></li>
+								<li><a href="#rm">Eliminar archivo</a></li>
+								<li><a href="#resetHead">Reset HEAD</a></li>
+							</ol>
+						</li>
+						<li><a href="#historial">Historial de trabajo</a>
+							<ol>
+								<li><a href="#commit">Commits</a></li>
+								<li><a href="#diff">Diff</a></li>
+							</ol>
+						</li>
+						<li><a href="#otros">Otros</a>
+							<ol>
+								<li><a href="#remote">Remote</a></li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<div id=configuracion class="marco">
+			<H2>Configuración</H2>
+			<p>Podemos ver la lista de configuraciones:</p>
+		</div>
+	</article>
+
+	<!-- DETAILS -->
+
+	<details>
+		<summary>Fuentes, créditos y enlaces de interés</summary>
+			<div>
+				<p> Fuentes:</p>
+				<a href="https://www.git-scm.com" target="_blank">
+				GIT</a></br>
+				<a href="https://www.git-scm.com/book/es/v2" target="_blank">
+				GIT Libro completo en castellano</a></br>
+				<p> Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
+			</div>
+	</details>
+
+	<!-- FOOTER -->
+
+	<footer>
+		<p></br>
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a></br>
+			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+		</p>
+	</footer>
+
+
+	<!-- Scripts -->
+	<script src="indexhtml/js/navigation.js" type="text/javascript"></script>
+	<script src="indexhtml/js/scroll.js" type="text/javascript"></script>
+
+	<!-- highlightjs -->
+	<script src="indexhtml/js/CodeBox_highlightjs/highlight.pack.js" type="text/javascript"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</BODY>
+
+</HTML>
