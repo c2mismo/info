@@ -4,13 +4,24 @@
 <meta charset="UTF-8">
 
 <HEAD>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		// $( document ).ready(function() {
+		$(function () {
+			console.log("Ha ocurrido document.ready: documento listo");
+		});
 
-	
+		$(window).on("load", function () {
+			console.log("Ha ocurrido window.load: ventana lista");
+		});
+	</script>
 
-</HEAD> 
+
+
+</HEAD>
 
 <BODY>
-	
+
 	<script src="JS.js"></script>
 
 
