@@ -275,7 +275,7 @@ alias st='~/.gitstatus.sh'</code></pre>
 
 		</div>
 
-
+		<!--AREAS DE TRABAJO-->
 		<div class="marco">
 			<h2>Areas de trabajo (Repositorios)</h2>
 
@@ -312,7 +312,7 @@ git remote</code></pre>
 			</div>
 		</div>
 
-
+		<!--ACTUAL AREA DE TRABAJO-->
 		<div class="marco">
 			<h2 id="actual">Actual area de trabajo</h2>
 
@@ -355,8 +355,22 @@ git rm --cached nombreArchivo
 			<pre><code class="bash">git reset HEAD nombreArchivo</code></pre>
 		</div>
 
+		<!--HISTORIAL DE TRABAJO-->
 		<div class="marco">
 			<h2 id="historial">Historial de trabajo</h2>
+
+			<h3 id="show">Show</h3>
+			<pre><code class="bash">git show
+# Muestra varios tipos de objetos
+git show nombreTag
+</code></pre>
+
+			<h3 id="tag">Tag</h3>
+			<pre><code class="bash">git tag
+# Muestra varios tipos de objetos
+git show nombreTag
+</code></pre>
+
 			<h3 id="commit">Commits</h3>
 			<p>Se commitearan todos los archivos que estén incluidos en el staged.</br>
 			El título del commit no debe contener más de 50 caracteres.</br>
@@ -380,13 +394,87 @@ nomArc				Comitea el archivo concreto antes de commitearlo todo
 					<pre><code class="bash">diff --check</code></pre>
 				</div>
 			</div>
+
 			<h3 id="diff">Diff</h3>
-			<p>Muestra los cambios ante10 de incluirlo en el staged.</p>
+			<p>Muestra los cambios antes de incluirlo en el staged.</p>
 			<pre><code class="bash">git diff
+# Muestra cambios antes de incluir en el staged
 # opciones:
+--word-diff
+# en una sola línea
 --staged
+# Solo los que se encuentran en el staged
+# --staged & --cached	son sinonimos
+HEAD
+# Muestra ambos
 --check
+# Busca espacios en blanco en los commits
+
+git diff master
+# ver una diferencia completa de lo que sucedería si combinara
+# esta rama temática con otra rama.
+# Pero puede ser engañoso por que se fijará en la rama master
+# donde fué creada la rama y este a podido evolucionar
+
+# mejor primero verifica donde se encuentra la rama master
+git merge-base contrib master
+36c7dba2c95e6bbb78dfa822519ecfec6e1ca649
+
+git diff 36c7db
+# o
+git diff $(git merge-base contrib master)
+# o
+git diff master...contrib
 </code></pre>
+
+			<h3 id="grep">Grep</h3>
+			<p>El comando <code>git grep</code> puede buscar cadenas en cualquier versión de su proyecto.</p>
+			<pre><code class="bash">git grep "hola" v2.5
+# Busca todas las apariciones de "hola" en v2.5.
+</code></pre>
+<p>Si omite el nombre de confirmación, <code>git grep</code> buscará cualquiera de los archivos que administra en su directorio actual.</p>
+			<pre><code class="bash">git grep "hola"
+</code></pre>
+
+			<h3 id="log">Log</h3>
+			<pre><code class="bash">git log
+# Muestra el log de todos los commits.
+# opciones:
+-p
+# muestra resultado diff
+--stat
+# Parecido pero quizás un poc mas de info
+
+--oneline
+# muestra solo una línea resumen de cada commit --short --full --fuller
+--oneline --decorate
+--oneline --decorate --graph --all
+--pretty=format:"%h - %an, %ar : %s"
+# a11bef0 - Scott Chacon, 6 years ago : first commit
+--pretty=format:"%h - %an" --graph
+-2
+# numero de ultimas salidas que quieres mostrar
+--since=2.weeks
+# --grep --author --all-match
+-S function_name
+# Por ejemplo, si desea encontrar la última confirmación
+# que agregó o eliminó una referencia a una función específica
+--pretty="%h - %s" --author='Junio C Hamano' --since="2008-10-01" \
+ --before="2008-11-01" --no-merges -- t/
+--no-merges tested..aliasServ/master
+# muestra solo la ultima rama (alisServ/master)
+contrib --not master
+# similar al anterior mostraria contrib pero no master
+master..contrib
+# equal
+</code></pre>
+
+			<h3 id="bisect">Bisect</h3>
+			<p>Nos permite movernos por el historial commit a commit.
+				Es muy util para localizar el lugar exacto en el que se produjo un error,
+				y marcarlo.
+			</p>
+			<p>Debemos estudiarlo a fondo</p>
 
 
 
@@ -398,7 +486,7 @@ nomArc				Comitea el archivo concreto antes de commitearlo todo
 
 
 
-
+		<!--OTROS COMANDOS DE UTILIDAD-->
 		<div class="marco">
 			<h2 id="otros">Otros comandos de utilidad</h2>
 			<h3 id="remote">Remote</h3>
