@@ -61,6 +61,10 @@ article p::first-letter {
   font-size: 200%;
 }
 
+article p > code {
+	font-weight: bold;
+}
+
 .initMarco {
 	width: 98%;
 	text-align: center;
