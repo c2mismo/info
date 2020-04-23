@@ -76,25 +76,23 @@ body {
   height: auto;
 }
 
-#menuNav .indiceDeco {
+#menuNav .marcoMenu {
   width: 92%;
   margin: 2rem;
   padding-top: 1rem;
   padding-left: 1rem;
-  height: 900px;
+  padding-bottom: 1rem;
+  height: auto;
   border: 0;
 	border-radius: 0.625rem;
   box-shadow: 0px 0px 9px #7dbbb9;
 }
-#menuNav iframe {
-  width: 92%;
-  margin: 2rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  height: 900px;
+.iframeArchivos {
+  /* Ampliar height
+  conforme añadamos archivos
+  a la lista */
+  height: 200px;
   border: 0;
-	border-radius: 0.625rem;
-  box-shadow: 0px 0px 9px #7dbbb9;
 }
 
 #menuNav .center {
