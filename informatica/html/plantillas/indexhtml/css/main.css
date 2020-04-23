@@ -143,6 +143,18 @@ article p > code {
 	color: #4b2367;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+  height: auto;
+}
+.aImg:link, .aImg:visited, .aImg:focus, .aImg:hover {
+	background: none;
+}
+.aImg img:hover, .aImg img:focus {
+	border: 0.15rem solid #7dbbb9;
+}
+
 .imgCenter {
 	display: block;
   margin-left: auto;
