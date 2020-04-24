@@ -27,6 +27,13 @@
 	color: #000000;
   text-shadow: 0px 0px 9px #7dbbb9;
 }
+.navBar a:link, .navBar a:visited, .navBar a:focus, .navBar a:hover {
+	text-decoration: none;
+}
+.navBar a:hover, .navBar a:focus {
+  background: none;
+  text-shadow: 0px 2px 9px #7dbbb9;
+}
 
 .navBar .contH1 {
   width: auto;
