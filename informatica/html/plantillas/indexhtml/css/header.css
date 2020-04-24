@@ -74,6 +74,10 @@
   .navBar {
     flex-direction: column;
   }
+  .navBar .c2mismo {
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+  }
   .navBar .contLaterales {
     width: auto;
   }
