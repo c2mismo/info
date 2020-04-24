@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<HTML lang="es">
+
+<HEAD>
+	<meta charset="UTF-8">
+
+	<TITLE>c2mismo Andorid Programas</TITLE>
+	<!-- Estilo CSS personal -->
+	<link href="../html/plantillas/indexhtml/css/main.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/anclas.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/header.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/navigation.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/animated.css" rel="stylesheet" type="text/css">
+	<link href="../html/plantillas/indexhtml/css/media-print.css" rel="stylesheet" type="text/css" media="print">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+
+</HEAD>
+
+<BODY>
+
+	<!-- initButton - Botton Top Up -->
+	<!-- &bigtriangleup; &Uarrocir; &uHar; &uArr; &barwed;-->
+	<button onclick="topFunction()" id="initBtn" class="printOff" title="Go to top">
+		&bigtriangleup;
+	</button>
+
+	<!-- navBar -->
+
+	<div class="contNavBar printOff">
+    <div class="navBar">
+      <div class="contLaterales"><p id="c2m" class="c2mismo">c2mismo</p></div>
+			<div class="contH1"><h1 class="h1Center">Programas Andorid</h1></div>
+			<div class="contLaterales">
+				<button id="openNavBtn" class="menuBtn" onclick="openNav()">
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+					<div class="lineBtn"></div>
+				</button>
+			</div>
+		</div>
+  </div>
+
+
+
+	<!-- menu Navigation -->
+		<!-- Close Boton -->
+		<!-- &triangleright; &times; &cross; &rarrap; &nesear; &rarrb; &Rang;-->
+	<div id="menuNav" class="printOff">
+		<button id="closeNavBtn" class="closeMenuBtn hidden animated bounceInRight time" onclick="closeNav()">&Rang;</button>
+
+		<!-- buttons Navigation -->
+		<button id="archivosBtn" class="menuNavBtn" onclick="showMenuArchivos()">Archivos</button>
+		<button id="indiceBtn" class="menuNavBtn" onclick="showMenuIndice()">Indice</button>
+
+		<!-- div Separador -->
+		<div class="contSplitMenuNav"><div class="splitMenuenuNav"></div></div>
+
+		<!-- div Archivos -->
+		<div class="contDivMenu">
+			<div id="archivosDiv" class="hidden marcoMenu">
+				<iframe class="iframeArchivos" src="../html/plantillas/indexhtml/archivos.html">
+				Tu navegador no soporta iFrames. Prueba con Firefox ;-/</iframe>
+			</div>
+		</div>
+
+		<!-- div Indice -->
+		<div class="contDivMenu">
+			<div id="indiceDiv" class="hidden marcoMenu">
+				<ol>
+					<li><a href="#configuracion">Configuracion</a>
+						<ol>
+							<li><a href="#usuales">Configuraciones usuales</a></li>
+							<li><a href="#avanzadas">Configuraciones avanzadas</a></li>
+						</ol>
+          </li>
+          <li><a href="#repo">Repositorios</a>
+						<ol>
+							<li><a href="#playstore">play Store</a></li>
+							<li><a href="#updown">uptodown lite</a></li>
+              <li><a href="#fdroid">f-droid</a></li>
+              <li><a href="#xda">XDA Developers</a></li>
+              <li><a href="#apkmirror">APKMirror</a></li>
+              <li><a href="#apkpure">APKPure</a></li>
+              <li><a href="#apkcuidado">Especial cuidado</a></li>
+            </ol>
+					</li>
+					<li><a href="#basicos">Programas Basicos</a>
+						<ol>
+							<li><a href="#teclado">Teclado</a></li>
+							<li><a href="#llamadas">Llamadas</a></li>
+							<li><a href="#mensajes">Mensajes</a></li>
+							<li><a href="#busybox">BusyBox</a></li>
+						</ol>
+          </li>
+          <li><a href="#utiles">Programas utiles</a>
+						<ol>
+							<li><a href="#terminal">terminal</a></li>
+						</ol>
+					</li>
+          <li><a href="#sistema">Programas Sistema</a>
+						<ol>
+							<li><a href="#terminal">terminal</a></li>
+						</ol>
+					</li>
+          <li><a href="#test">Programas Test</a>
+						<ol>
+							<li><a href="#terminal">terminal</a></li>
+						</ol>
+					</li>
+          <li><a href="#esecur">Programas eSecurity</a>
+						<ol>
+							<li><a href="#terminal">terminal</a></li>
+						</ol>
+					</li>
+          <li><a href="#office">Programas Ofimatica</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#audio">Programas Audio</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#web">Programas Web</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#comunicacion">Programas Comunicación</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#transporte">Programas Transporte</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#compras">Programas Compras</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#cursos">Programas Cursos</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#gps">Programas Gps</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#electronic">Programas Electronica</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#natural">Programas Naturaleza</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+          <li><a href="#juegos">Programas Juegos</a>
+						<ol>
+							<li><a href="#status">Ver cambios</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div> <!-- nav -->
+
+	<!-- DOCUMENT -->
+
+	<article>
+		<div id="inicio" class="initMarco">
+			<div class="printOn titlePrint">
+				<p>TITULO</p><!--onlyPrint-->
+			</div>
+			<p>Este manual no pretende ser una guía completa sobre el tema a tratar,
+			mas bien una guía rápida y escueta.</p>
+			<div class="printOn"><!--onlyPrint-->
+				<p><strong>INDICE</strong></p>
+				<div class="center">
+					<ol>
+						<li><a href="#configuracion">Configuracion</a>
+              <ol>
+                <li><a href="#usuales">Configuraciones usuales</a></li>
+              </ol>
+            </li>
+            <li><a href="#actual">Repositorios</a>
+              <ol>
+                <li><a href="#status">f-droid</a></li>
+                <li><a href="#add">updown lite</a></li>
+                <li><a href="#mv">play Store</a></li>
+              </ol>
+            </li>
+            <li><a href="#actual">Programas</a>
+              <ol>
+                <li><a href="#status">Ver cambios</a></li>
+                <li><a href="#add">Añadir cambios</a></li>
+                <li><a href="#mv">Mover archivo</a></li>
+                <li><a href="#rm">Eliminar archivo</a></li>
+                <li><a href="#resetHead">Reset HEAD</a></li>
+              </ol>
+            </li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+    <!-- CONFIGURACION -->
+		<div id=configuracion class="marco">
+			<H2 id=usuales>Configuraciones usuales</H2>
+			<p>Podemos ver la lista de configuraciones:</p>
+			<H2 id=avanzadas>Configuraciones avanzadas</H2>
+			<p>Para Rootear estaba usando:</p>
+			<a class="aImg" href="https://root-all-devices.uptodown.com/android" target="_blank"><img class="imgDeco" class="imgDeco" src="./android_img/Root en todos los dispositivos.png" alt="Root en todos los dispositivos"></a>
+			<p>En los últmos dispositivos he tenido que acudir al foro de UMI</p>
+    </div>
+
+    <!-- REPOSITORIOS -->
+    <div id=repo class="marco">
+			<H2>Repositorios</H2>
+      <p>Podemos ver la lista de repositorios:</p>
+			<h3 id=playstore>Play Store</h3>
+			<a class="aImg" href="https://play.google.com/store" target="_blank"><img class="imgDeco" src="./android_img/Google Play.png" alt="Google Plays"></a>
+      <p>No cabe mucha explicación, en contra mas importante, te exige una cuenta de correos gmail <br>
+      prefiero dejarla como ultima opción.</p>
+			<h3 id=updown>Uptodown lite</h3>
+			<a class="aImg" href="https://www.uptodown.com/" target="_blank"><img class="imgDeco" src="./android_img/Uptodown.png" alt="uptodown lite"></a>
+      <p>Bastante completo, no precisa de cuenta alguna. <br>
+      Contras, igual que google play pero con la ventaja anteriormente descrita.</p>
+      <h3 id=fdroid>F-Droid</h3>
+			<a class="aImg" href="https://f-droid.org/es/" target="_blank"><img class="imgDeco" src="./android_img/F-Droid.png" alt="F-Droid"></a>
+      <p>Te aseguran privacidad, evitan los programas que rastrean al usuario. <br>
+			Te avisan de cualquier tipo de acción que pueda realizar el programa <br>
+			que pueda poner en riesgo las libertades fundamentales del usuario. <br>
+			Contras; en fin como resultado de la indiferencia generalizada de los usuarios, <br>
+			tienen muy pocos programas.</p>
+			<h3 id=xda>XDA Developers</h3>
+			<a class="aImg" href="https://www.xda-developers.com/xda-labs/" target="_blank"><img class="imgDeco" src="./android_img/XDA Labs.png" alt="XDA Developers"></a>
+			<p>Es el repositorio del foro de desarrolladores alternativo más activo del entorno android, <br> enfocado en creaciones de ROOMs alternativas y APPs para administradores de sistema. <br> Todos sus desarrollos se encuentran bajo openSource, gratuitos y libres de publicidad. <br>
+			Para descargar sus APPs en la web <a href="https://labs.xda-developers.com/" target="_blank">xdalabs</a>.</p>
+			<h3 id=apkmirror>APKMirror</h3>
+			<a class="aImg" href="https://www.apkmirror.com/apk/apkmirror/apkmirror-installer-official/" target="_blank"><img class="imgDeco" src="./android_img/APKMirror.png" alt="APKMirror"></a>
+			<p>Basada en openSource esta bien para buscar versiones antiguas o betas. <br>
+			Creo que se le puede añadir repositorios de GitHub y xda-labs, queda por probar.</p>
+			<h3 id=apkpure>APKPure</h3>
+			<a class="aImg" href="https://apkpure.com/es/apkpure-app.html" target="_blank"><img class="imgDeco" src="./android_img/APKPure.png" alt="APKPure"></a>
+			<p>Permite salterse las restricciones de los paises y algunas herramientas más.</p>
+			<h3 id=apkcuidado>Especial cuidado</h3>
+			<p>Hay que tener especial cuidado con ACMarket, Blackmart y parecidos, tienen aplicaciones posiblemente modificadas, no se sabe por quién, el qué se ha modificado, ni razones reales. <br> Por lo tanto muy peligroso.</p>
+		</div>
+
+  	<!-- BASICOS -->
+		<div id=basicos class="marco">
+			<H2>Basicos</H2>
+			<h3 id=teclado>Teclado</h3>
+			<a class="aImg" href="https://f-droid.org/es/packages/org.pocketworkstation.pckeyboard/" target="_blank"><img class="imgDeco" src="./android_img/Hacker's Keyboard.png" alt="Hacker's Keyboard"></a>
+			<p>Es el mas completo que he encontrado openSource y gratuito. <br> <br>
+			Configuración para el F1 Play: <br>
+			portrait 20% <br>
+			landscape 38% <br>
+			Configuración para el S2 Lite: <br>
+			portrait 25% <br>
+			landscape 38% <br>
+			Configuración para el ROME: <br>
+			portrait 26% <br>
+			landscape 45% <br> <br>
+			Configuración extra: <br>
+			Sugestion 0n landsc.. - Deseleccionado
+			Theme and label setting - Tema de teclado - Gingerbread
+			Mayusculas automáticas - Deseleccionado
+			Mostrar sugerencias - Deseleccionado
+			INMPUT LANGUAGES - es
+			no tiene esperanto
+			</p>
+			<h3 id=llamadas>Llamadas</h3>
+			<p>Esta pendiente de buscar, se han realizado varias busquedas, <br>
+			tan solo uno que aunque tiene muchas opciones no hemos podido demostrar <br>
+			si es suficientemente confiable.
+			</p>
+			<a class="aImg" href="https://drupe.uptodown.com/android" target="_blank"><img class="imgDeco" src="./android_img/Drupe.png" alt="Drupe"></a>
+			<h3 id=mensajes>Mensajes</h3>
+			<p>Esta pendiente de buscar.
+			</p>
+			<h3 id=busybox>BusyBox</h3>
+			<a class="aImg" href="https://f-droid.org/es/packages/ru.meefik.busybox/" target="_blank"><img class="imgDeco" src="./android_img/BusyBox.png" alt="BusyBox"></a>
+			<p>BusyBox combina pequeñas versiones de muchas utilidades comunes de UNIX <br>
+			en un único ejecutable pequeño. Proporciona reemplazos para la mayoría de las utilidades <br>
+			que generalmente se encuentran en GNU Fileutils, Shellutils, etc. <br>
+			Las utilidades en BusyBox generalmente tienen menos opciones que sus primos GNU completos; <br>
+			sin embargo, las opciones que se incluyen proporcionan la funcionalidad esperada <br>
+			y se comportan de manera muy similar a sus contrapartes GNU. <br>
+			BusyBox proporciona un entorno bastante completo para cualquier sistema pequeño o integrado.
+			</p>
+		</div>
+
+
+
+
+	</article>
+
+	<!-- DETAILS -->
+
+	<details>
+		<summary>Fuentes, créditos y enlaces de interés</summary>
+			<div>
+				<p> Fuentes:</p>
+				<a href="https://play.google.com/store" target="_blank">
+					Play Store</a></br>
+				<a href="https://www.uptodown.com/" target="_blank">
+					Uptodown lite</a></br>
+				<a href="https://f-droid.org/es/" target="_blank">
+					F-Droid</a></br>
+				<a href="https://labs.xda-developers.com/" target="_blank">
+					XDA Developers</a></br>
+				<a href="https://www.apkmirror.com/" target="_blank">
+					APKMirror</a></br>
+				<a href="https://apkpure.com/" target="_blank">
+					APKPure</a></br>
+				<p> Si por alusión o por completar este manual o algún otro motivo crees que deberían ser añadidas otras fuentes o créditos, por favor no dude en ponerse en contacto con nosotros, gracias.</p>
+			</div>
+	</details>
+
+	<!-- FOOTER -->
+
+	<footer>
+		<p></br>
+			<a href="https://github.com/c2mismo" target="_blank">c2mismo</a>, 2020 </br></br>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+				<img class="imgCenter" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+			</a></br>
+			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+		</p>
+	</footer>
+
+
+	<!-- Scripts -->
+	<script src="../html/plantillas/indexhtml/js/navigation.js" type="text/javascript"></script>
+  <script src="../html/plantillas/indexhtml/js/scroll.js" type="text/javascript"></script>
+
+</BODY>
+
+</HTML>
