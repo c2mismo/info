@@ -78,7 +78,7 @@ body {
 
 #menuNav .marcoMenu {
   width: 92%;
-  margin: 2rem;
+  margin: 1.5rem auto;
   padding-top: 1rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -160,5 +160,13 @@ body {
 @media (max-width: 750px) {
   #menuNav .closeMenuBtn {
     left: 0rem;
+  }
+}
+
+@media (max-width: 600px) {
+	#menuNav .marcoMenu {
+    padding-top: 0.2rem;
+    padding-left: 0rem;
+    padding-bottom: 0.2rem;
   }
 }
