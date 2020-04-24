@@ -64,3 +64,26 @@
 .colorDir > a:link, .colorDir > a:visited {
   color: #00a8cc;
 }
+
+
+.colorArc {
+  color: #2aafb0;
+}
+
+.colorArc a {
+  text-decoration: none;
+}
+
+.colorArc > a {
+	color: #2aafb0;
+}
+
+.colorArc > a:hover {
+  color: #bff3ff;
+  background: #ffffff00;
+  text-shadow: 0px 0px 7px #7dbbb9;
+}
+
+.colorArc > a:link, .colorDir > a:visited {
+  color: #7dbbb9;
+}

@@ -1,11 +1,13 @@
 a {
   outline: none;
-  /* text-decoration: none; */
+  text-decoration: none;
+  background: none;
   padding: 0.125rem 0.0625rem 0;
 }
 /* El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. */
 a:link, a:visited {
-  color: #2aafb0;
+  background: none;
+  color: none;
 }
 /* Un enlace cuando ya se ha visitado (está grabado en el historial del navegador).
 a:visited {
@@ -14,18 +16,47 @@ a:visited {
 /* Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab
 del teclado o se le da el foco mediante programación usando HTMLElement.focus()). */
 a:focus {
+  background: none;
+  color: none;
+}
+/* Un enlace cuando se le pasa el cursor por encima. */
+a:hover {
+  background: none;
+  color: none;
+}
+/* Un enlace cuando se activa (por ejemplo, se hace clic encima). */
+a:active {
+  background: none;
+  color: none;
+}
+
+p a {
+  outline: none;
+  text-decoration: underline;
+  padding: 0.125rem 0.0625rem 0;
+}
+/* El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. */
+p a:link, p a:visited {
+  color: #2aafb0;
+}
+/* Un enlace cuando ya se ha visitado (está grabado en el historial del navegador).
+a:visited {
+  color: #2aafb0;
+} */
+/* Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab
+del teclado o se le da el foco mediante programación usando HTMLElement.focus()). */
+p a:focus {
   border-bottom: 0.0625rem solid;
   background: #7dbbb9;
   color: #002b36;
 }
 /* Un enlace cuando se le pasa el cursor por encima. */
-a:hover {
+p a:hover, {
   background: #7dbbb9;
   color: #002b36;
 }
 /* Un enlace cuando se activa (por ejemplo, se hace clic encima). */
-a:active {
+p a:active {
   background: #7dbbb9;
   color: #002b36;
 }
-
