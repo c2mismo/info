@@ -146,7 +146,11 @@ article p > code {
 img {
 	display: block;
 	max-width: 100%;
-  height: auto;
+	height: auto;
+}
+.imgDeco {
+	border-radius: 0.625rem;
+	box-shadow: 0 0 0.57rem #7dbbb9;
 }
 .aImg:link, .aImg:visited, .aImg:focus, .aImg:hover {
 	background: none;
